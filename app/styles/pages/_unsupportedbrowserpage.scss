@@ -1,0 +1,41 @@
+.unsupported-page {
+    text-align: center;
+    display: flex;
+    min-height: calc(100vh - 120px - 60px);
+    align-items: center;
+
+    .unsupported-page-content {
+        margin: auto;
+        padding: 30px 10px;
+
+        img {
+            max-width: 150px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h4 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .notfound-page-content {
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+
+    .notfound-page {
+        min-height: calc(100vh - 120px - 80px);
+    }
+}

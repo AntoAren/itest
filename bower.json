@@ -1,0 +1,64 @@
+{
+  "name": "portal-angular-product",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-base64": "~2.0.1",
+    "restangular": "~1.5.1",
+    "angular-local-storage": "~0.1.5",
+    "jquery": "~2.2.0",
+    "jquery-ui": "~1.11.4",
+    "angular-ui-router": "~0.2.13",
+    "ngDialog": "~0.3.12",
+    "angular-ui-bootstrap": "^1.1.2",
+    "interact": "~1.2.6",
+    "jsPlumb": "1.5.5",
+    "zeroclipboard": "~2.2.0",
+    "angular-color-picker": "angularjs-color-picker#^1.1.1",
+    "css-element-queries": "~0.3.0",
+    "angular-recaptcha": "~2.2.5",
+    "angular-ui-date": "^1.0.1",
+    "detect": "https://www.github.com/darcyclarke/Detect.js.git#v2.2.2",
+    "owl.carousel": "https://www.github.com/OwlFonk/OwlCarousel.git#4460c16a26b1bba1309b672c8c7c53cb519aca98",
+    "jquery-ui-touch-punch": "https://github.com/cbier/bower-jquery-ui-touch-punch.git#v0.2.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.9",
+    "angular-scenario": "~1.4.9"
+  },
+  "appPath": "app",
+  "overrides": {
+    "ngDialog": {
+      "main": [
+        "js/ngDialog.js",
+        "css/ngDialog.css"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "owl-carousel/owl.carousel.js"
+      ]
+    },
+    "detect": {
+      "main": [
+        "detect.js"
+      ]
+    },
+    "jsPlumb": {
+      "main": [
+        "dist/js/jquery.jsPlumb-1.5.5.js"
+      ]
+    },
+    "jquery-ui-touch-punch": {
+      "main": [
+        "jquery.ui.touch-punch.js"
+      ]
+    },
+    "angular-ui-bootstrap": {
+      "main": [
+        "src/dropdown/dropdown.js",
+        "src/position/position.js"
+      ]
+    }
+  }
+}

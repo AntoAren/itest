@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html class="no-js" data-version="%%versionstring%%">
+<head>
+    <meta charset="utf-8">
+    <base href="%%baseURL%%">
+    <title ng-bind="title"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type='text/css' />
+
+    <!-- build:css({.,.tmp,app}) styles/style.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css" />
+    <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.css" />
+    <!-- endbower -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.min.css" />
+
+    <link rel="stylesheet" href="styles/css/reset.css" />
+    <link rel="stylesheet" href="styles/css/waiting.css"/>
+
+    <link rel="stylesheet" href="styles/style.css"/>
+    <!-- endbuild -->
+
+</head>
+<body class="no-touch" ng-class="{'full-screen-page': fullscreenPageState}">
+<header-menu></header-menu>
+<div class="content" ui-view autoscroll="true">
+
+</div>
+<!-- .content -->
+<footer ng-include="'views/common/footer.html'"></footer>
+<notification></notification>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-base64/angular-base64.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/ngDialog/js/ngDialog.js"></script>
+<script src="bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js"></script>
+<script src="bower_components/angular-ui-bootstrap/src/position/position.js"></script>
+<script src="bower_components/interact/interact.js"></script>
+<script src="bower_components/jsPlumb/dist/js/jquery.jsPlumb-1.5.5.js"></script>
+<script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
+<script src="bower_components/tinycolor/tinycolor.js"></script>
+<script src="bower_components/angular-color-picker/dist/angularjs-color-picker.js"></script>
+<script src="bower_components/css-element-queries/src/ElementQueries.js"></script>
+<script src="bower_components/css-element-queries/src/ResizeSensor.js"></script>
+<script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
+<script src="bower_components/angular-ui-date/dist/date.js"></script>
+<script src="bower_components/detect/detect.js"></script>
+<script src="bower_components/owl.carousel/owl-carousel/owl.carousel.js"></script>
+<script src="bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+<!-- Auth -->
+<script src="scripts/auth/auth.js"></script>
+<script src="scripts/auth/services/loginservice.js"></script>
+<script src="scripts/auth/services/authservice.js"></script>
+<script src="scripts/auth/services/authsession.js"></script>
+<script src="scripts/auth/controllers/loginctrl.js"></script>
+<script src="scripts/auth/controllers/logoutctrl.js"></script>
+<script src="scripts/auth/controllers/signupctrl.js"></script>
+<script src="scripts/auth/directives/logindirectives.js"></script>
+
+<!--Common-->
+<script src="scripts/common/common.js"></script>
+<script src="scripts/common/controllers/tabsetctrl.js"></script>
+<script src="scripts/common/controllers/headerctrl.js"></script>
+<script src="scripts/common/directives/headermenu.js"></script>
+<script src="scripts/common/directives/dropdownmenu.js"></script>
+<script src="scripts/common/directives/dropdownfiltermenu.js"></script>
+<script src="scripts/common/directives/sidebar.js"></script>
+<script src="scripts/common/directives/platesidebar.js"></script>
+<script src="scripts/common/directives/notification.js"></script>
+<script src="scripts/common/directives/errorsrc.js"></script>
+<script src="scripts/common/directives/tabs.js"></script>
+<script src="scripts/common/directives/resize.js"></script>
+<script src="scripts/common/directives/disableif.js"></script>
+<script src="scripts/common/directives/navigation.js"></script>
+<script src="scripts/common/directives/textinput.js"></script>
+<script src="scripts/common/directives/infinitescroll.js"></script>
+<script src="scripts/common/directives/disableif.js"></script>
+<script src="scripts/common/directives/searchinput.js"></script>
+<script src="scripts/common/directives/btnradio.js"></script>
+<script src="scripts/common/directives/owlcarousel.js"></script>
+<script src="scripts/common/directives/pageheader.js"></script>
+<script src="scripts/common/directives/showtooltip.js"></script>
+<script src="scripts/common/services/notifier.js"></script>
+<script src="scripts/common/services/restservices.js"></script>
+<script src="scripts/common/services/paging.js"></script>
+<script src="scripts/common/services/confirmdialog.js"></script>
+<script src="scripts/common/services/deletedialog.js"></script>
+<script src="scripts/common/services/jsonschema.js"></script>
+<script src="scripts/common/services/previousstateservice.js"></script>
+<script src="scripts/common/filters/join.js"></script>
+<script src="scripts/common/directives/orderbutton.js"></script>
+<script src="scripts/common/services/orderdialog.js"></script>
+
+<!-- Data -->
+<script src="scripts/data/data.js"></script>
+<script src="scripts/data/services/tokenservice.js"></script>
+<script src="scripts/data/services/usersservice.js"></script>
+<script src="scripts/data/services/testservice.js"></script>
+<script src="scripts/data/services/categoryservice.js"></script>
+<script src="scripts/data/services/categoryservice.js"></script>
+<script src="scripts/data/services/topicservice.js"></script>
+
+<!-- AllTests -->
+<script src="scripts/alltests/alltests.js"></script>
+<script src="scripts/alltests/controllers/alltestsctrl.js"></script>
+<script src="scripts/alltests/directives/alltestsplate.js"></script>
+
+<!-- AssignedToMe -->
+<script src="scripts/assignedtome/assignedtome.js"></script>
+<script src="scripts/assignedtome/controllers/assignedtomectrl.js"></script>
+<script src="scripts/assignedtome/directives/assignedtomeplate.js"></script>
+
+<!-- MyResults -->
+<script src="scripts/myresults/myresults.js"></script>
+<script src="scripts/myresults/controllers/myresultsctrl.js"></script>
+<script src="scripts/myresults/directives/myresultsplate.js"></script>
+
+<!-- CreatedByMe -->
+<script src="scripts/createdbyme/createdbyme.js"></script>
+<script src="scripts/createdbyme/controllers/createdbymectrl.js"></script>
+<script src="scripts/createdbyme/directives/createdbymeplate.js"></script>
+<script src="scripts/createdbyme/directives/createdbymeactionplate.js"></script>
+
+<!-- CreateNewTest -->
+<script src="scripts/createnewtest/createnewtest.js"></script>
+<script src="scripts/createnewtest/controllers/createnewtestctrl.js"></script>
+
+<!-- EditTest -->
+<script src="scripts/edittest/edittest.js"></script>
+<script src="scripts/edittest/controllers/edittestctrl.js"></script>
+
+<!-- Startup -->
+<script src="scripts/bootstrapper.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/routing.js"></script>
+<script src="scripts/app.mock.js"></script>
+
+<!-- endbuild -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-touch.js"></script>
+</body>
+</html>

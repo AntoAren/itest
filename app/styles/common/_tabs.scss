@@ -1,0 +1,105 @@
+.tabs-container {
+    &.transparent {
+        margin: 0 auto;
+
+        .tabs-titles {
+            padding: 0;
+            line-height: 57px;
+            background-color: transparent;
+
+            li {
+                border: none;
+                display: inline-block;
+                margin-right: 3px;
+
+                a {
+                    color: $text-color-black;
+                    display: block;
+                    padding: 0 17px;
+                    font-size: $font-size-base;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $brand-color;
+                    }
+                }
+            }
+
+            .selected {
+                border-bottom: 3px solid $brand-color;
+
+                a {
+                    color: $brand-color;
+                    cursor: default;
+                }
+            }
+        }
+
+        .tab-content-block {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        .tab-content-block.selected {
+            display: block;
+        }
+    }
+
+    &.vertical {
+        display: table;
+        vertical-align: top;
+
+        .tabs-titles, .tab-content {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .tabs-titles {
+            line-height: 32px;
+            padding-right: 100px;
+
+            li {
+                display: block;
+                float: none;
+                margin-right: 0;
+                border: none;
+                border-left: 4px solid transparent;
+                margin-bottom: 10px;
+
+                a {
+                    text-align: left;
+                }
+            }
+
+            .selected {
+                border-bottom: none;
+                border-left-color: $brand-color;;
+            }
+        }
+
+        .tab-content-block {
+            margin: 0;
+        }
+    }
+
+    &.scrollable {
+        .tabs-titles {
+            white-space: nowrap;
+            display: inline-block;
+
+            li {
+                float: none;
+            }
+        }
+
+        &.mousemove {
+
+            cursor: move;
+
+            a {
+                pointer-events: none;
+            }
+        }
+    }
+}

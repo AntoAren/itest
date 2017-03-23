@@ -1,0 +1,52 @@
+.page-header {
+    background: $brand-color;
+
+    .page-header-container {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFF;
+        line-height: 120px;
+    }
+
+    .back {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -11px;
+        width: 28px;
+        height: 22px;
+        background: url(#{$imagesPath}/preivew-arrow.png) 0 50% no-repeat;
+        cursor: pointer;
+    }
+
+    @media all and (max-width: 480px) {
+        .page-header-container {
+
+            h2 {
+                line-height: 60px;
+                padding: 20px 0;
+            }
+
+            .back {
+                left: 10px;
+            }
+        }
+    }
+
+    @media all and (max-width: 315px) {
+        .page-header-container {
+
+            h2 {
+                line-height: 40px;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+

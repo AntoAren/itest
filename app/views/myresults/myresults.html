@@ -1,0 +1,38 @@
+<div class="sandbox-page" infinite-scroll="loadMore()" infinite-scroll-stop="!hasMore">
+    <plate-sidebar>
+        <div class="filter-section">
+            <div class="search-input">
+                <search-input placeholder="Поиск" action="searchTests" default-value="searchValue"></search-input>
+            </div>
+            <dropdownfilter-menu ng-model="sortOptions.items" default-title="sortOptions.title"
+                                 type="sortOptions.type" ng-change="sortTests(selectedItem.value)"
+                                 ontoggle="toggled(open)" class="filter-menu"></dropdownfilter-menu>
+            <dropdownfilter-menu ng-model="categoryOptions.items" default-title="categoryOptions.title"
+                                 type="categoryOptions.type" ng-change="filterTestsByCategory(selectedItem.value)"
+                                 ontoggle="toggled(open)" class="filter-menu" scrollable="true"></dropdownfilter-menu>
+            <dropdownfilter-menu ng-model="topicOptions.items" default-title="topicOptions.title"
+                                 type="topicOptions.type" ng-change="filterTestsByTopic(selectedItem.value)"
+                                 ontoggle="toggled(open)" class="filter-menu" scrollable="true"></dropdownfilter-menu>
+            <div class="btn-container">
+                <button ng-click="resetFilters()" title="Reset all filters" class="btn btn-reset-filters btn-wide"
+                        ng-disabled="isResetUnavailable">
+                    Сбросить
+                </button>
+            </div>
+        </div>
+    </plate-sidebar>
+    <div ng-hide="tests.length > 0 || loadingTests || searchResult" class="no-data-subscriptions">
+        <h3>Пока на сайте нет тестов. Зайдите позже :)</h3>
+    </div>
+    <div ng-show="!tests.length && searchResult && !loadingTests" class="no-data-subscriptions">
+        <h3>По вашему запросу не найдено ни одного теста.</h3>
+    </div>
+    <div class="sandbox-content-wrapper">
+        <ul class="sandbox-content">
+            <li class="plate" ng-repeat="plate in tests" status="{{status}}">
+                <my-results-plate></my-results-plate>
+            </li>
+            <div ng-hide="!hasMore" disable-if="hasMore" class="waiting-container" ng-class="{'first-time': firstTime}"></div>
+        </ul>
+    </div>
+</div>

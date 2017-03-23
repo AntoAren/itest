@@ -1,0 +1,30 @@
+.admin-old-styles {
+    .default-orgs {
+        padding-top: 5px;
+
+        input, select {
+            width: 250px;
+            margin-bottom: 5px;
+        }
+
+        .btn-delete {
+            height: 20px !important;
+            padding: 0 5px !important;
+            font-size: 12px !important;
+            line-height: 0 !important;
+        }
+
+        .title-container {
+            margin-bottom: 20px;
+            font-weight: 600;
+
+            .title-item {
+                display: inline-block;
+
+                &.first {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

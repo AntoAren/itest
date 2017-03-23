@@ -1,0 +1,29 @@
+.admin-old-styles {
+    table .sortable-column div {
+        position: relative;
+        cursor: pointer;
+        outline: none;
+    }
+    table .sortable-column div a {
+        padding-right: 5px;
+    }
+
+    table .sortable-column div span {
+        vertical-align: middle;
+        display: inline-block;
+        height: 5px;
+        width: 8px;
+    }
+
+    table .sortable-column div span.top {
+        background: url(../images/admin-old-styles/arrows-spr.png) no-repeat -3px -160px;
+    }
+
+    table .sortable-column div span.bottom {
+        background: url(../images/admin-old-styles/arrows-spr.png) no-repeat -3px -175px;
+    }
+
+    table .sortable-column .organization-column {
+        min-width: 111px;
+    }
+}

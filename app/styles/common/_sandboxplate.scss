@@ -1,0 +1,571 @@
+.sandbox-plate {
+    margin: 8px;
+    padding: 20px 20px 0;
+    width: 212px;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .btn-delete {
+        width: 14px;
+        height: 14px;
+        float: right;
+        background: url(#{$imagesPath}/widgetconfig-actions.png) 166px 0;
+        opacity: 0.6;
+        cursor: pointer;
+        background-size: 350% 100%;
+        top: 2px;
+    }
+    .btn-delete:hover {
+        opacity: 1;
+    }
+    .btn-info {
+        max-height: 18px;
+        float: left;
+        color: $info-color;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+        .popover-info {
+            background-color: $info-color;
+            color: $text-color-white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.25);
+            display: none;
+            left: -12px;
+            top: 28px;
+            padding: 7px 3px 7px 7px;
+            position: absolute;
+            width: 150px;
+            z-index: 4;
+            &:before {
+                border-bottom: 7px solid $info-color;
+                border-right: 7px solid transparent;
+                border-left: 7px solid transparent;
+                top: -6px;
+                content: '';
+                display: block;
+                left: 16%;
+                margin-left: -11px;
+                position: absolute;
+            }
+            .dashboard-name {
+                display: block;
+                word-break: break-all;
+            }
+        }
+        &:hover {
+            .popover-info {
+                display: block;
+                animation: fade-in .3s linear 1;
+            }
+        }
+    }
+
+    .indicator-in-use {
+        float: left;
+        left: -20px;
+        font-size: 12px;
+        background-color: #a3c644;
+        color: $text-color-white;
+        padding: 3px 10px;
+        text-transform: uppercase;
+    }
+
+    .img-icon {
+        display: block;
+        margin: 25px auto;
+        text-align: center;
+        height: 64px;
+        cursor: pointer;
+
+        .device-icon {
+            margin: 0 auto;
+            width: 64px;
+            height: 64px;
+        }
+        .ipad {
+            background-image: url(#{$imagesPath}/ipad.svg);
+        }
+        .ipad-desktop {
+            background-image: url(#{$imagesPath}/desktop-ipad.svg);
+        }
+        .ipad-iphone {
+            background-image: url(#{$imagesPath}/ipad-iphone.svg);
+        }
+        .ipad-desktop-iphone {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+        .ipad-iphone-desktop {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+        .iphone {
+            background-image: url(#{$imagesPath}/iphone.svg);
+        }
+        .iphone-ipad {
+            background-image: url(#{$imagesPath}/ipad-iphone.svg);
+        }
+        .iphone-desktop {
+            background-image: url(#{$imagesPath}/desktop-iphone.svg);
+        }
+        .iphone-ipad-desktop {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+        .iphone-desktop-ipad {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+        .desktop {
+            background-image: url(#{$imagesPath}/desktop.svg);
+        }
+        .desktop-iphone {
+            background-image: url(#{$imagesPath}/desktop-iphone.svg);
+        }
+        .desktop-ipad {
+            background-image: url(#{$imagesPath}/desktop-ipad.svg);
+        }
+        .desktop-ipad-iphone {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+        .desktop-iphone-ipad {
+            background-image: url(#{$imagesPath}/desktop-ipad-iphone.svg);
+        }
+    }
+    .img-icon-wide {
+        max-width: 150px;
+        width: auto;
+        height: 64px;
+    }
+    .img-icon-normal {
+        width: 64px;
+    }
+    .plate-name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        padding-bottom: 12px;
+
+        &:hover ~ .tooltip {
+            display: block;
+            bottom: 35px;
+        }
+    }
+    .organizations {
+        margin-bottom: 10px;
+    }
+    .plate-info {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: $text-color-light-gray;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover ~ .tooltip {
+            display: block;
+            bottom: 20px;
+        }
+    }
+
+    .categories-list {
+        display: inline-block;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+
+        &:hover ~ .tooltip {
+            display: block;
+            bottom: 27px;
+        }
+    }
+    .plate-name a {
+        text-decoration: none;
+        color: $text-color-black;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .status {
+        color: #2a2a2a;
+        padding-bottom: 10px;
+        font-size: 12px;
+        min-height: 28px;
+
+        .device-names {
+            font-size: 14px;
+        }
+
+        .widget-list {
+            display: inline-block;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: -5px;
+            width: 100%;
+            font-size: 14px;
+
+            &:hover ~ .tooltip {
+                display: block;
+                bottom: 20px;
+            }
+        }
+    }
+
+    .upload-widget-icon {
+        background: url(#{$imagesPath}/widget-icons.png) 0 0;
+    }
+    .upload-datasource-icon {
+        background: url(#{$imagesPath}/widget-icons.png) 128px 0;
+    }
+    .upload-application-icon {
+        background: url(#{$imagesPath}/widget-icons.png) 64px 0;
+    }
+    .upload-dashboard-icon {
+        background: url(#{$imagesPath}/widget-icons.png) 192px 0;
+    }
+    .upload-dashboard-icon {
+        background: url(#{$imagesPath}/widget-icons.png) 192px 0;
+    }
+
+    .status-indicator {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+    }
+    .retired {
+        background-color: $status-color-red;
+    }
+    .uploaded {
+        background-color: $text-color-light-gray;
+    }
+     .published {
+        background-color: $status-color-green;
+    }
+    .submitted {
+        background-color: $status-color-orange;
+    }
+    .under_review {
+        background-color: $status-color-orange;
+    }
+    .rejected {
+        background-color: $status-color-red;
+    }
+    .status-date {
+        display: flex;
+        color: $text-color-light-gray;
+        font-size: 14px;
+        height: 18px;
+
+        .status-date-icon {
+            position: relative;
+            top: 3px;
+            margin-right: 5px;
+        }
+        .date {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            max-width: 65px;
+        }
+        .external-link {
+            width: 18px;
+            height: 18px;
+            display: block;
+            margin-left: auto;
+            background: url(#{$imagesPath}/widgetconfig-actions.png) 0 0;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        .external-link:hover {
+            opacity: 1;
+        }
+    }
+    &.upload {
+        background-color: $main-background-color;
+        border: dotted 2px #cfcfcf;
+        padding-bottom: 23px;
+        .uploader {
+            cursor: pointer;
+        }
+        .plate-name {
+            white-space: normal;
+            overflow: visible;
+            height: 69px;
+            a {
+                color: $text-color-light-gray;
+            }
+        }
+    }
+    &.uploaded {
+        background-color: $text-color-white;
+        box-shadow: 0 0 1px 0 rgba(0,0,0,0.25);
+    }
+    dropdown-menu {
+        position: absolute;
+        right: 0;
+    }
+    .text-color-grey {
+        color: $text-color-light-gray;
+    }
+    .text-elipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    left: 0;
+    max-width: 140px;
+    word-wrap: break-word;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background-color: $info-color;
+    font-size: $font-size-base;
+    color: $text-color-white;
+
+    &:before {
+        border-top: 7px solid $info-color;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        bottom: -6px;
+        content: '';
+        display: block;
+        left: 20%;
+        position: absolute;
+    }
+
+    span {
+        display: block;
+
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .sandbox-content li.plate {
+        width: 20%;
+    }
+
+    sandbox-actionplate {
+        width: 20%;
+    }
+
+    .menu-open {
+        .sandbox-content li.plate {
+            width: 25%;
+        }
+
+        sandbox-actionplate {
+            width: 25%;
+        }
+    }
+
+    .sandbox-content .sandbox-plate {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .sandbox-content .sandbox-plate {
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 984px) {
+    .sandbox-content li.plate {
+        width: 25%;
+
+        .status {
+
+            .device-names {
+                font-size: 13px;
+            }
+        }
+    }
+
+    sandbox-actionplate {
+        width: 25%;
+    }
+
+    .menu-open {
+        .sandbox-content li.plate {
+            width: 33%;
+        }
+
+        sandbox-actionplate {
+            width: 33%;
+        }
+    }
+
+    .sandbox-content .sandbox-plate {
+        margin: 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 850px) {
+    .sandbox-content .sandbox-plate {
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .sandbox-content li.plate {
+        width: 33%;
+    }
+
+    sandbox-actionplate {
+        width: 33%;
+    }
+
+    .menu-open {
+        .sandbox-content li.plate {
+            width: 33%;
+        }
+
+        sandbox-actionplate {
+            width: 33%;
+        }
+    }
+
+    .sandbox-content .sandbox-plate {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .sandbox-content .sandbox-plate {
+        margin: 5px;
+
+
+    }
+    .sandbox-content li.plate {
+
+        .status {
+
+            .device-names {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sandbox-content li.plate {
+        width: 50%;
+        min-width: 150px;
+
+        .status {
+
+            .device-names {
+                font-size: 14px;
+            }
+        }
+    }
+
+    sandbox-actionplate {
+        width: 50%;
+        min-width: 150px;
+    }
+
+    .menu-open {
+        .sandbox-content li.plate {
+            width: 50%;
+            min-width: 150px;
+        }
+
+        sandbox-actionplate {
+            width: 50%;
+            min-width: 150px;
+        }
+    }
+
+    .sandbox-content .sandbox-plate {
+        width: auto;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .sandbox-content .sandbox-plate {
+
+        padding: 15px 15px 0;
+        margin: 3px;
+        max-height: 214px;
+
+        &.upload {
+            padding-bottom: 25px;
+        }
+
+        .img-icon {
+            margin: 20px auto;
+        }
+
+        .img-icon-wide {
+            max-width: 130px;
+        }
+
+        .indicator-in-use {
+            left: -15px;
+        }
+
+        .tooltip {
+            max-width: 120px;
+        }
+    }
+
+    .sandbox-content li.plate {
+
+        .status {
+
+            .device-names {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 358px) {
+
+    .sandbox-content li.plate {
+
+        .tooltip {
+            max-width: 120px;
+        }
+
+        .status {
+
+            .device-names {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .sandbox-plate {
+        max-height: 206px;
+
+
+        &.upload {
+
+            .plate-name {
+                white-space: normal;
+                overflow: visible;
+            }
+        }
+    }
+}

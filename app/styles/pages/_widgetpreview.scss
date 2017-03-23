@@ -1,0 +1,458 @@
+.wr {
+    max-width: 1395px;
+    margin: 0px auto;
+}
+
+.widget-desc {
+
+    .widget-desc-container {
+        position: relative;
+
+        &:after {
+            content: ' ';
+            display: block;
+            clear: both;
+            font-size: 0;
+        }
+    }
+
+    .widget-name {
+        margin-top: -3px;
+        text-transform: uppercase;
+    }
+
+    .widget-desc-item {
+        padding-left: 25px;
+        float: left;
+        width: 50%;
+        max-width: calc(100% - 120px);
+
+        &:first-child {
+            width: 64px;
+            height: 100%;
+            padding: 0;
+        }
+    }
+
+    .widget-desciption {
+        padding-left: 90px;
+        clear: both;
+        width: 100%;
+    }
+
+    .datasource-desc-item {
+        padding-left: 25px;
+        float: left;
+        width: 50%;
+        max-width: calc(100% - 120px);
+
+        &:first-child {
+            width: auto;
+            height: 100%;
+            padding: 0;
+        }
+
+        .favicon {
+
+            .image-wrapper {
+                width: 64px;
+                height: auto;
+
+                .datasource-icon {
+                    border: solid 1px $bg-color-light-gray;
+                }
+            }
+
+            .order-btn-container {
+
+                .btn {
+                    min-width: 180px;
+                }
+            }
+        }
+    }
+
+    .btn-try {
+        padding: 0;
+        width: 64px;
+        font-size: $font-size-base;
+    }
+
+    .feedback {
+        font-size: $font-size-sm;
+        color: #606060;
+        line-height: 21px;
+    }
+
+    .reviews {
+        white-space: nowrap;
+    }
+
+    .rating {
+        display: inline-block;
+        vertical-align: top;
+        background: url(#{$imagesPath}/home-ratingStar.png) 0 0 repeat-x transparent;
+        height: 18px;
+        line-height: 18px;
+        width: 90px;
+    }
+
+    .rating.four {
+        width: 72px;
+    }
+
+    .rating.tree {
+        width: 54px;
+    }
+
+    .rating.two {
+        width: 36px;
+    }
+
+    .organization {
+        color: #606060;
+        font-size: $font-size-sm;
+    }
+
+    .widget-name,
+    .organization,
+    .feedback,
+    .favicon {
+        margin-bottom: 15px;
+    }
+}
+
+.widget-screens {
+    .owl-wrapper:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em; /* Adjusts for spacing */
+    }
+
+    .owl-item {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .screens-item {
+        margin: 0 10px;
+        display: inline-block;
+
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+.screens-preview {
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .screens-preview-content {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .owl-item {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .preview-item {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 50px;
+        width: 100%;
+        box-sizing: border-box;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 600px;
+            width: auto;
+        }
+    }
+
+    //    Rewrite owl carousel default styles
+    .owl-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        .owl-pagination {
+            display: none;
+        }
+
+        .owl-buttons div {
+            position: absolute;
+            background: transparent;
+        }
+
+        .owl-buttons .owl-prev {
+            left: 0;
+            top: -33px;
+        }
+
+        .owl-buttons .owl-next {
+            right: 0;
+            top: -33px;
+        }
+
+        .owl-prev-arrow, .owl-next-arrow {
+            display: inline-block;
+        }
+
+        .owl-prev-arrow {
+            background: url(#{$imagesPath}/arrows.png) no-repeat 0 0;
+            width: 17px;
+            height: 33px;
+        }
+
+        .owl-next-arrow {
+            background: url(#{$imagesPath}/arrows.png) no-repeat -23px 0;
+            width: 17px;
+            height: 33px;
+        }
+    }
+}
+
+.widget-details {
+    .details {
+        li {
+            padding: 10px 0;
+            text-align: left;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &.information {
+                display: flex;
+
+                .value {
+                    word-wrap: break-word;
+                    max-width: 70%;
+                    flex: 1;
+                }
+            }
+        }
+
+        .category {
+            display: inline-block;
+            min-width: 165px;
+            margin-right: 60px;
+        }
+
+        .value {
+            font-weight: bold;
+        }
+    }
+}
+
+.widget-reviews {
+    margin-bottom: 80px;
+
+    .reviews {
+        margin-bottom: 40px;
+    }
+}
+
+.separator {
+    border-bottom: 1px solid #E4E5E6;
+}
+
+.section-content {
+    padding: 20px;
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+}
+
+.widget-btn-container {
+    padding-left: 90px;
+    padding-top: 20px;
+    clear: both;
+
+    .inner-btn {
+        display: inline-block;
+    }
+
+    .second-btn {
+        padding-left: 10px;
+    }
+
+    &.datasource-btn-container {
+        padding-left: 80px;
+        padding-top: 0;
+    }
+}
+
+@media all and (max-width: 1440px) {
+
+    .wr {
+        max-width: 980px;
+    }
+
+    .widget-desc {
+        .widget-desc-item {
+            width: 80%;
+        }
+    }
+}
+
+@media all and (max-width: 980px) {
+
+    .wr {
+        max-width: 768px;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .wr {
+        max-width: 640px;
+    }
+
+    .widget-details .details li.information {
+        display: inline;
+
+        .category, .value {
+            min-width: 80px;
+            max-width: 95%;
+            float: left;
+        }
+
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+    }
+
+    .widget-details .details .category {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    .widget-desc {
+        .widget-desc-item {
+            width: auto;
+        }
+
+        .widget-desc-item:last-child {
+            padding-left: 25px;
+            width: auto;
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    .wr {
+        max-width: 320px;
+    }
+
+    .page-desc {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .section-content {
+        padding: 30px 10px;
+    }
+
+    .screens-preview {
+        .owl-controls {
+            position: static;
+
+            .owl-pagination {
+                display: block;
+            }
+
+            .owl-buttons {
+                display: none;
+            }
+        }
+
+        .preview-item {
+            padding: 0 10px;
+        }
+    }
+    .widget-desc {
+        .widget-name,
+        .organization,
+        .feedback,
+        .favicon {
+            margin-bottom: 10px;
+        }
+    }
+    .widget-btn-container {
+        padding-left: 0px;
+        float: left;
+        padding-top: 20px;
+        clear: both;
+
+        .inner-btn {
+            display: inline-block;
+        }
+
+        .second-btn {
+            padding-left: 10px;
+        }
+    }
+}
+
+@media all and (max-width: 340px) {
+
+    .widget-desc {
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 305px) {
+    .widget-btn-container {
+        padding-left: 0px;
+        float: left;
+        padding-top: 20px;
+        clear: both;
+
+        .inner-btn {
+            display: inline-block;
+        }
+
+        .second-btn {
+            padding-left: 0px;
+        }
+    }
+}
+
+@media all and (max-height: 700px) {
+    .screens-preview {
+        .preview-item {
+            img {
+                max-height: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "restServicesEndpoint": "http://localhost:8080",
+    "itestPortalEndpoint": "http://localhost:9002"
+}

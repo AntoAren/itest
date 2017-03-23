@@ -1,0 +1,119 @@
+.plate-container {
+
+    .subscription-info {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: $text-color-light-gray;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    .plate-footer {
+        display: flex;
+        font-size: 14px;
+        background-color: $main-background-color;
+        margin: -10px 8px 10px;
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+        padding: 10px 20px;
+        .date {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            max-width: 88px;
+            margin-left: -4px;
+            i {
+                padding-right: 5px;
+                color: $text-color-light-gray;
+            }
+        }
+        dropdown-menu {
+            position: absolute;
+            right: 20px;
+            bottom: 12px;
+        }
+
+        .external-link {
+            width: 18px;
+            height: 18px;
+            margin-left: auto;
+            background: url(#{$imagesPath}/widgetconfig-actions.png) 0 0;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        .external-link:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -3px 3px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 984px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -10px 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -5px 3px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -10px 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -5px 5px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -10px 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .plate-container {
+
+        .plate-footer {
+            margin: -3px 3px 10px;
+            padding: 10px;
+
+            .date {
+                margin-left: 0;
+            }
+        }
+    }
+}

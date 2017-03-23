@@ -1,0 +1,353 @@
+.login-page {
+    background: url(#{$imagesPath}/loginBg.jpg) 50% 0 no-repeat;
+    background-size: cover;
+    min-width: initial;
+
+    header-menu, footer {
+        display: none;
+    }
+
+    &.full-screen-page {
+        background: url(#{$imagesPath}/loginBg.jpg) 50% 0 no-repeat;
+        background-size: cover;
+        min-width: initial;
+
+        .waiting {
+            position: fixed;
+        }
+    }
+}
+
+.login-hidden {
+    display: none !important;
+}
+
+.login-page .content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.login-page .content .sso {
+    position: inherit !important;
+}
+
+.login-page .content .sso .image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login-page .content .sso .image-wrapper img {
+    display: block;
+    margin: 100px auto 0;
+}
+
+.login-page .content-wrapper-small {
+    padding-top: 150px;
+}
+
+.login-page .content-wrapper-small {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.login-form {
+    width: 100%;
+    height: 575px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+    position: relative;
+}
+
+.login-form .login-wrapper {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.login-form .login-wrapper .login-header {
+    position: relative;
+}
+
+.login-form .login-wrapper .congratulation-header {
+    position: relative;
+}
+
+.login-form .login-wrapper .logo-image {
+    height: 60px;
+    position: relative;
+}
+
+.login-form .login-wrapper .logo-image a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(#{$imagesPath}/itest-header-logo.jpg) center no-repeat #fff;
+}
+
+.login-form .close-button {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    background: url(#{$imagesPath}/login-closeButton.png) center no-repeat #fff;
+    z-index: 10;
+}
+
+.login-form .login-wrapper h1 {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 55px 0 40px;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.login-form .login-wrapper .msg {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-form .login-wrapper .error-msg {
+    color: #EE6A57;
+}
+
+.login-form .login-wrapper .btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.login-form .login-wrapper .btn.btn-blue {
+    background-color: #38C2D7;
+}
+
+.login-form .login-wrapper .btn.btn-blue:disabled {
+    background-color: #a4d1d7;
+    cursor: not-allowed;
+}
+
+.login-form .login-wrapper .btn.btn-blue:hover:disabled {
+    background-color: #a4d1d7;
+}
+
+.login-form .login-wrapper .btn.btn-blue:hover {
+    background-color: #12ACC1;
+}
+
+.login-form .login-wrapper .btn.btn-plum {
+    background-color: #8E244D;
+}
+
+.login-form .login-wrapper .btn.btn-plum:hover {
+    background-color: #6E1E3B;
+}
+
+.login-form .input-wrapper {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 25px;
+    box-sizing: content-box;
+}
+
+.login-form .input-wrapper input[type = 'text']:hover,
+.login-form .input-wrapper input[type = 'password']:hover,
+.login-form .input-wrapper input[type = 'email']:hover,
+.login-form .input-wrapper input[type = 'text']:focus,
+.login-form .input-wrapper input[type = 'password']:focus,
+.login-form .input-wrapper input[type = 'email']:focus {
+    border-bottom: 2px solid #38C2D7;
+}
+
+.login-form {
+    input:required:invalid {
+        outline: none;
+    }
+}
+
+.login-form .input-wrapper .input-wrapper-span {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    color: #B8B8B8;
+    padding: 0;
+}
+
+.login-form .input-wrapper input[type = 'text'].login-error,
+.login-form .input-wrapper input[type = 'email'].login-error {
+    height: 29px;
+    border-bottom: 2px solid #EE6A57;
+}
+
+.login-form .input-wrapper .input-wrapper-span.login-error {
+    color: #EE6A57;
+}
+
+.login-form .input-wrapper input[type = 'text'], .login-form input[type = 'password'], .login-form input[type = 'email'] {
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    width: calc(100% - 20px);
+    height: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid #B8B8B8;
+}
+
+.login-form .input-wrapper input:hover + span, .login-form .input-wrapper input:focus + span {
+    color: #38C2D7;
+}
+
+.login-form .wrapper {
+    font-size: 0;
+    margin-bottom: 25px;
+}
+
+.login-form .wrapper-recaptcha {
+    text-align: center;
+    margin: 34px 0 33px
+}
+
+.login-form .wrapper-recaptcha > div {
+    display: inline-block;
+    min-height: 78px;
+}
+
+.login-form .wrapper .item {
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+}
+
+.login-form .wrapper .item.remember {
+    text-align: left;
+}
+
+.login-form .wrapper .item.remember .text {
+    margin-left: 5px;
+}
+
+.login-form .wrapper .item.forgot-pass {
+    text-align: right;
+}
+
+.login-form .wrapper .item.forgot-pass a {
+    color: #38C2D7;
+}
+
+.login-form input[type = 'checkbox'] {
+    display: none;
+    float: none;
+}
+
+.login-form input[type = 'checkbox']:checked ~ label.checkbox {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAMAAADepFZYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADvEKCAAAAAKHRSTlMAKJgILei7ATLs+VEMhTnw9EYQzMoUQPPvOozd9ekxeP7jY/zcIEsZfV/CYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABTSURBVAjXRYzXDoAwFEJvXXXUvfdW/v8LrYmtvMBJACIlZpg6k2XD4QpcD34gXYSCKIqRpBKyHEVZ1Wjat8I7oB8wTt9kXoCV6bttP87/nK77Cw/8oASxIZj4hwAAAABJRU5ErkJggg==) center no-repeat #38C2D7;
+    border: 2px solid #38C2D7;
+}
+
+.login-form a {
+    float: none;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.login-form input[type = 'checkbox'] + label {
+    float: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.login-form .item label {
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.login-form input[type = 'checkbox'] + label.checkbox {
+    width: 13px;
+    height: 13px;
+    border: 2px solid #B8B8B8;
+    border-radius: 2px;
+}
+
+.login-form .login-wrapper .separator {
+    border: none;
+    border-top: 1px solid #e7e7e7;
+    margin: 40px 0 30px 0;
+}
+
+.login-form .login-wrapper .separator .text {
+    margin: -11px auto 0;
+    background-color: white;
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sign-up {
+    text-align: center;
+    display: block;
+    margin-top: 24px;
+}
+
+.sign-up a {
+    display: inline;
+    color: #38C2D7;
+}
+
+.copywrite {
+    text-align: center;
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .login-page {
+        background: #FFFFFF;
+    }
+
+    .login-page .content .sso .image-wrapper {
+        background-color: #B8B8B8;
+    }
+
+    .login-page .content-wrapper-small {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .login-page .content-wrapper-small {
+        padding-top: 75px;
+    }
+
+    .login-form {
+        border-radius: 0;
+    }
+
+    .login-form .login-wrapper {
+        width: 100%;
+        padding: 0 9px;
+        box-sizing: border-box;
+    }
+
+    .login-form .close-button {
+        right: 9px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .login-page .content-wrapper-small {
+        padding-top: 0;
+    }
+}

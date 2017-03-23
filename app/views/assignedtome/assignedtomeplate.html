@@ -1,0 +1,35 @@
+<div class="plate-container">
+    <div class="sandbox-plate uploaded">
+        <a class="img-icon">
+            <img alt="{{plate.name}}" src="images/test-logo.png"/>
+        </a>
+        <div>
+            <h6 class="plate-name" ng-mouseover="widthChecker($event)" show-tooltip>
+                <span class="value">{{::plate.name}}</span>
+            </h6>
+            <div class="tooltip" ng-show="showTooltip">
+                {{::plate.name}}
+            </div>
+        </div>
+        <div class="categories" ng-mouseover="widthChecker($event)" show-tooltip>
+            <span class="plate-info categories-list">
+                <span class="value">{{::plate.category}}&#160;</span>
+            </span>
+            <span class="tooltip" ng-show="showTooltip">
+                {{::plate.category}}
+            </span>
+        </div>
+        <div class="categories" ng-mouseover="widthChecker($event)" show-tooltip>
+            <span class="plate-info categories-list">
+                <span class="value">{{::plate.topic}}&#160;</span>
+            </span>
+            <span class="tooltip" ng-show="showTooltip">
+                {{::plate.topic}}
+            </span>
+        </div>
+    </div>
+    <div class="plate-footer">
+        <!--<div class="date"><i class="fa fa-clock-o fa-lg"></i>{{::plate.deadline}}</div>-->
+        <div class="date"><i class="fa fa-clock-o fa-lg"></i>DEADLINE</div>
+    </div>
+</div>

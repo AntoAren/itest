@@ -1,0 +1,72 @@
+$font-family-sans-pro: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif !default;
+$font-family-oswald: "Oswald Regular", "Arial Black", Gadget, sans-serif !default;
+$font-family-base: $font-family-sans-pro !default;
+
+$brand-color: #39c2d7;
+$status-color-green: #a3c644;
+$status-color-orange: #efbf24;
+$status-color-red: #ee6a57;
+$main-background-color: #f5f6f7;
+
+$header-bg-color: #373B42;
+$header-bg-hover-color: #3f444b;
+$bg-color-light-gray: #c7cacb;
+$text-color-gray-light: #c7cacb;
+$bg-color-dark-gray: #898989;
+$text-color-gray-dark: #868686;
+$bg-color-white: #fff;
+
+$text-color-gray: #929394;
+$link-color: #1dadc2;
+$config-border-color: #e4e5e6;
+
+$text-color-white: #fff;
+$text-color-black: #303030;
+$text-color-dark-gray: #686869;
+$text-color-light-gray: #929394;
+
+$light-gray: #E6E6E6;
+
+$basic-red-color: #f07967;
+$basic-green-color: #a3c644;
+
+
+$success-color: #abcb56;
+$error-color: #f07967;
+$warning-color: #ec8e3a;
+$info-color: #4bc7da;
+
+$btn-info-bg: #39c2d7;
+$btn-info-bg-hover: #009cb1;
+$btn-success-bg: #a3c644;
+$btn-success-bg-hover: #8eab2c;
+$btn-cancel-bg: #c7cacb;
+$btn-cancel-bg-hover: #929394;
+$btn-warning-bg: #ee6a57;
+$btn-warning-bg-hover: #d15948;
+$btn-help-bg: #8e244d;
+$btn-help-bg-hover: #6e1e3b;
+
+$font-size-base: 16px !default;
+$font-size-lg: 1.25rem !default;
+$font-size-sm: .85rem !default;
+$font-size-xs: .75rem !default;
+
+$font-size-h1: 72px !default;
+$font-size-h2: 42px !default;
+$font-size-h3: 30px !default;
+$font-size-h4: 24px !default;
+$font-size-h5: 20px !default;
+$font-size-h6: 16px !default;
+
+$headings-font-family: $font-family-oswald !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+$line-height-lg: (4/3) !default;
+$line-height-sm: 1.5 !default;
+
+//paths
+$imagesPath: '../images';
+$fontsPath: '../fonts';

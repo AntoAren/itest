@@ -1,0 +1,14 @@
+.snapping {
+    padding-top: 10px;
+    width: 100%;
+
+    .grid-layout-wrapper {
+        .widgets {
+            height: 100%;
+        }
+    }
+
+    .hide-layout {
+        display: none;
+    }
+}

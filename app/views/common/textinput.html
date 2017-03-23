@@ -1,0 +1,7 @@
+<div class="text-input-container">
+    <div ng-class="{'input-error': errorHandler}" class="input-container">
+        <label class="placeholder" for="{{id}}" unselectable="on">{{placeholder}}</label>
+        <input id="{{id}}" type="{{type}}" tabindex="{{tabindex}}" maxlength="{{maxLength}}" ng-model="$parent.ngModel" ng-if="inputType==='input'" ng-trim="false" autocomplete="off" ng-disabled="{{disabled}}" />
+        <textarea name="{{id}}" id="{{id}}" tabindex="{{tabindex}}" maxlength="{{maxLength}}" ng-model="$parent.ngModel" ng-if="inputType==='textarea'" ng-trim="false" ng-disabled="{{disabled}}"></textarea>
+    </div>
+</div>

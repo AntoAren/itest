@@ -1,0 +1,10 @@
+<div class="nav-container" ng-if="showNavigation">
+    <h4 ng-bind="title"></h4>
+    <div class="sandbox-navigation-container">
+        <tabset mode="transparent" scrollable="true">
+            <tab ng-repeat="item in navigationStates" heading="{{item.name}}" state="{{item.state}}"
+                 select="goToState(item.state)"></tab>
+        </tabset>
+    </div>
+</div>
+<div ui-view autoscroll="true" class="sandbox-type-page-content"></div>

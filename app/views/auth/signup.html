@@ -1,0 +1,42 @@
+<div class="login-form" login-page disable-if="submittingForm">
+    <div class="login-wrapper">
+        <a class="close-button" ng-href="{{closeHref}}" ng-click="close()"></a>
+
+        <h1>РЕГИСТРАЦИЯ</h1>
+
+        <p class="error-msg" ng-show="authError">
+            <!--Insert backend error message-->
+        </p>
+
+        <form ng-submit="signUp()">
+            <fieldset>
+                <div class="input-wrapper">
+                    <input id="username" type="email" tabindex="1" placeholder="Электронная почта"
+                           ng-class="{'login-error': authError}" ng-model="user.username" required>
+                    <span class="input-wrapper-span" ng-class="{'login-error': authError}"><i
+                        class="fa fa-user"></i></span>
+                </div>
+                <div class="input-wrapper">
+                    <input id="password" class="pass" type="password" tabindex="2" placeholder="Пароль"
+                           ng-model="user.password" required>
+                    <span class="input-wrapper-span"><i class="fa fa-unlock-alt"></i></span>
+                </div>
+                <div class="input-wrapper">
+                    <input id="password-confirm" class="pass" type="password" tabindex="3"
+                           placeholder="Подтверждение пароля"
+                           ng-model="user.passwordConfirm" required>
+                    <span class="input-wrapper-span"><i class="fa fa-unlock-alt"></i></span>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-brand">СОЗДАТЬ АККАУНТ</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="sign-up">
+            У Вас уже есть аккаунт? <a ui-sref="login">Войти</a>
+        </div>
+        <div class="logo-image">
+            <a class="image" ng-href="{{itestPortalEndpoint}}" target="_self"></a>
+        </div>
+    </div>
+</div>

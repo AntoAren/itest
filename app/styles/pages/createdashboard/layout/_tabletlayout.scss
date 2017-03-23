@@ -1,0 +1,21 @@
+.snapping.tablet {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex: auto;
+
+    .grid-layout-wrapper {
+        padding: 5px;
+        background-color: #F5F6F8;
+
+        .grid-layout {
+            background: url(#{$imagesPath}/gridcell.png) repeat;
+            margin: 0 auto;
+            border: 1px solid $bg-color-dark-gray;
+        }
+    }
+
+    @media all and (max-width: 1500px) {
+        justify-content: flex-start;
+    }
+}

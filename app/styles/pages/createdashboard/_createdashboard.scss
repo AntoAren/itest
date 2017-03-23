@@ -1,0 +1,368 @@
+.create-dashboard {
+
+    .save-not-active .save-button {
+        background: #C6C9CA;
+        pointer-events: none;
+    }
+
+    .header-flex-right {
+        flex: 1 100px;
+    }
+
+    .input-container:after {
+        content: ' ';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, rgba(255,255,255,0), #fff 50%);
+    }
+
+    .animation-color.input-container:after {
+        display: none;
+    }
+
+    .controls-wrapper .input-container:after {
+        background: linear-gradient(to right, rgba(255,255,255,0), #f5f6f7 80%);
+    }
+
+    .no-data-found {
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            color: #b8b8b8;
+        }
+    }
+
+    .sidebar-content {
+        flex-direction: column;
+        padding-left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .platform-tabs {
+            padding: 30px 0;
+            height: 34px;
+            box-sizing: content-box;
+
+            .web, .native {
+                cursor: pointer;
+                display: inline-block;
+                border: 1px solid $light-gray;
+                line-height: 34px;
+                width: 130px;
+                text-align: center;
+                color: $text-color-black;
+            }
+
+            .native {
+                margin-left: -4px;
+            }
+
+            .web-cb:checked ~ .web, .native-cb:checked ~ .native {
+                cursor: default;
+                color: $text-color-white;
+                background-color: $brand-color;
+                border-color: $brand-color;
+            }
+
+            input {
+                display: none;
+            }
+        }
+
+        .draggable-items {
+            width: 100%;
+
+            .widgets-list {
+                padding-left: 20px;
+                user-select: none;
+
+                > div {
+                    &:last-child {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 14px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                height: 6px;
+                border: 4px solid rgba(0, 0, 0, 0);
+                background-clip: padding-box;
+                -webkit-border-radius: 7px;
+                background-color: #e4e5e6;
+            }
+
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+
+            &::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+
+            &.sidebar-content {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .drop-widget-area {
+        border: 3px dashed $basic-green-color;
+        position: absolute;
+        z-index: 9001;
+        background-color: transparent;
+
+        &.invalid {
+            border-color: $basic-red-color;
+        }
+    }
+
+    .dropped-widget {
+        position: absolute;
+        overflow: hidden;
+        z-index: 8999;
+
+        &.last-changed {
+            z-index: 9000;
+        }
+
+        &.moving {
+            z-index: 9002;
+        }
+
+        .freeze-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            display: none;
+        }
+
+        .scroll-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            display: block;
+        }
+
+        &.with-intersections {
+            .scroll-overlay {
+                border: 3px dashed $basic-red-color;
+            }
+        }
+
+        .frame {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(181, 181, 181, 0.6);
+
+            iframe {
+                position: relative;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &:hover, &:active {
+            .drag::before, .remove::before {
+                display: block;
+                z-index: 4;
+            }
+        }
+
+        .resize, .remove, .drag {
+            display: block;
+            position: absolute;
+            content: '';
+            padding: 10px;
+            z-index: 1000001;
+        }
+
+        .resize {
+            right: -10px;
+            top: calc(100% - 18px - 10px); //18 - element's height
+            color: $text-color-white;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .resize div {
+            width: 18px;
+            height: 18px;
+            background: url(#{$imagesPath}/resize.png) center no-repeat;
+        }
+
+        .drag {
+            top: -10px;
+            left: -10px;
+            color: $text-color-white;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .drag div {
+            background: url(#{$imagesPath}/drag_icon.png) $brand-color center no-repeat;
+            width: 24px;
+            height: 24px;
+        }
+
+        .remove {
+            top: -10px;
+            right: -10px;
+            color: $text-color-white;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .remove div {
+            width: 24px;
+            height: 24px;
+            background: url(#{$imagesPath}/cross_icon.png) $basic-red-color center no-repeat;
+
+        }
+    }
+
+    .dimension-message {
+        display: none;
+        padding-top: 180px;
+        background: url(#{$imagesPath}/not-sup-dimensions.png) center 80px no-repeat;
+        text-align: center;
+
+        h3 {
+            color: $text-color-black;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+    }
+
+    .change-name-button {
+        cursor: default;
+    }
+
+    &.preview {
+        .expand-menu-label.dropdown-toggle,
+        .static-width-container,
+        .sidebar, .edit-name,
+        .remove, .drag, .resize,
+        .arrow-right, .arrow-left,
+        .add-mobile-layout-btn-wrapper, .close, .edit-dashboard-name, .scroll-overlay {
+            display: none !important;
+        }
+
+        .snapping.desktop .grid-layout-wrapper .grid-layout,
+        .snapping.tablet .grid-layout-wrapper .grid-layout,
+        .snapping.mobile .grid-layout-wrapper .grid-layout.mobile .mobile-grids-wrapper .mobile-grid {
+            background-image: none;
+        }
+
+        input {
+            border: none;
+        }
+
+        .text-input-container {
+            &:after {
+                content: ' ';
+                width: 240px;
+                height: 40px;
+                position: absolute;
+                top: -25px;
+                background: transparent;
+            }
+        }
+
+        .full-screen-page-header text-input {
+            left: 25px;
+        }
+
+        .device-switcher .devices-wrapper {
+            right: 10px;
+        }
+
+        &.noteditable {
+            .save-button {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu-close {
+    .platform-tabs {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1024px) {
+
+    .create-dashboard .full-screen-page-header {
+        height: 120px;
+    }
+
+    .create-dashboard .full-screen-page-header .close-button {
+        border: none;
+    }
+
+    .create-dashboard .full-screen-page-header .border {
+        border-left: 1px solid #E6E6E6;
+    }
+
+    .create-dashboard .full-screen-page-header .header-flex-center {
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 60px;
+    }
+
+    .create-dashboard .full-screen-page-header .device-switcher {
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+}
+
+@media all and (max-width: 740px) {
+    .create-dashboard .dimension-message {
+        display: inline-block;
+    }
+
+    .create-dashboard .full-screen-page-content {
+        flex: 0;
+
+        .resize-sensor {
+            height: 1px; // fix resize-sensor in FF
+        }
+
+        sidebar {
+            display: none;
+        }
+
+        .full-screen-page-view .snapping {
+            display: none;
+        }
+    }
+
+    .create-dashboard .full-screen-page-header {
+        height: 60px;
+
+        .header-flex-left, .header-flex-center,
+        .device-switcher, .save-button {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<div class="dialog">
+  <form class="form confirm">
+    <div class="title" ng-bind="ngDialogData.title"></div>
+    <p ng-bind-html="ngDialogData.message"></p>
+    <div class="button-wrapper">
+        <button type="submit" ng-click="confirm()" class="btn btn-confirm" ng-class="ngDialogData.type">
+            <div ng-bind="ngDialogData.confirmButtonText"></div>
+        </button>
+        <button type="submit" ng-click="closeThisDialog()" class="btn btn-cancel">
+            <div ng-bind="ngDialogData.cancelButtonText"></div>
+        </button>
+    </div>
+  </form>
+  <a href="" ng-click="closeThisDialog('cross')" class="close-form"></a>
+</div>

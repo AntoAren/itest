@@ -1,0 +1,19 @@
+<div class="dropdown" uib-dropdown>
+        <div uib-dropdown-toggle class="button">
+            <span class="status-text">{{title}}</span>
+            <span class="text" title="{{currentItem.name}}">{{currentItem.name}}</span>
+            <span class="caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        </div>
+
+    <div class="options-list filter-options" ng-class="{'scrollable-dropdown': (scrollable && (items.length > 8))}" uib-dropdown-menu>
+        <ul>
+            <li title="{{item.name}}" ng-repeat="item in items" class="dropdown-item" ng-class="{'selected': (currentItem.name === item.name)}">
+                <a href="" ng-click="selectedItemChanged(item)">
+                    <span class="item-name">{{item.name}}</span>
+                    <span ng-if="type === 'statusFilter'" class="status-indicator {{item.value}}"></span>
+                </a>
+            </li>
+            <li ng-hide="items.length !== 0">No items matched</li>
+        </ul>
+    </div>
+</div>

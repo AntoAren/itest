@@ -1,0 +1,12 @@
+<div class="notification-container" ng-class="notificationClass" ng-hide="hideNotification" ng-mouseover="cancelTimeout()">
+    <div class="notification">
+        <div class="notification-header">
+            <div class="icon"></div>
+            <h5 ng-bind="header"></h5>
+        </div>
+        <p ng-bind="message"></p>
+        <a class="close-notification" ng-click="onClose()">
+
+        </a>
+    </div>
+</div>

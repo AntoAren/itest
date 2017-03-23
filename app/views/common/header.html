@@ -1,0 +1,50 @@
+<header class="header">
+    <nav class="nav" uib-dropdown>
+
+        <div class="close-nav">
+            <a href="javascript:void(0)" class="show-menu"><i class="fa fa-times"></i></a>
+            <a ng-href="{{itestPortalEndpoi}}" target="_self" class="logo">iTest</a>
+        </div>
+
+        <a href="javascript:void(0)" class="show-menu burger-menu" uib-dropdown-toggle><i class="fa fa-bars"></i></a>
+        <div class="state-name"><span ng-bind="title"></span></div>
+
+        <div class="menu-wrapper" uib-dropdown uib-dropdown-menu>
+            <div class="account-information" uib-dropdown-toggle>
+                <div class="account-logo"></div>
+                <div class="text">
+                    <p class="name"><span ng-bind="username"/><span class="down-arrow"></span></p>
+                </div>
+            </div>
+
+            <ul class="main-menu">
+                <li title="Marketplace" class="mob-menu" ng-class="{active : state === 'alltests'}">
+                    <a ui-sref="alltests">Все тесты</a>
+                </li>
+                <li title="Sandbox" class="mob-menu" ng-class="{active : state === 'assignedtome'}">
+                    <a ui-sref="assignedtome">Назначенные мне</a>
+                </li>
+                <li title="Preferences" class="mob-menu" ng-class="{active : state === 'myresults'}">
+                    <a ui-sref="myresults">Мои результаты</a>
+                </li>
+                <li title="Subscriptions" class="mob-menu" ng-class="{active : state === 'createdbyme'}" ng-show="isDeveloper">
+                    <a ui-sref="createdbyme">Созданные мной</a>
+                </li>
+                <li title="Administration" class="mob-menu" ng-class="{active : state === 'admin'}" ng-show="isAdmin">
+                    <a ui-sref="admin.users">Администрирование</a>
+                </li>
+            </ul>
+
+            <div class="account-menu" uib-dropdown-menu>
+                <p class="account-menu-header">Профиль пользователя</p>
+                <ul>
+                    <li class="my-account-field">
+                        <a ui-sref="logout">
+                            <i class="fa fa-sign-out"></i>Выйти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="shadow"></div>
+</header>

@@ -1,0 +1,84 @@
+.account-page, .phonegap-page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 15px;
+
+    h4 {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .btn-wide {
+        width: 100%;
+    }
+
+    a {
+        color: $brand-color;
+    }
+}
+
+.phonegap-page {
+    .input-container {
+        position: static;
+        margin-top: 50px;
+    }
+
+    .access-token-input {
+        input:focus, input:hover {
+            border-bottom: 1px solid #B8B8B8;
+        }
+    }
+
+    .more-info {
+        margin: 20px 0 5px;
+    }
+}
+
+.account-page {
+    .user-head {
+        text-align: center;
+
+        h6 {
+            color: #929394;
+            margin-top: 20px;
+            margin-bottom: 45px;
+            cursor: pointer;
+        }
+    }
+
+    .user-image {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-image: url(#{$imagesPath}/user-big.png);
+        margin-top: 45px;
+    }
+
+    .field-name {
+        color: #929394;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 40px;
+        color: #5d5d5d;
+        padding-bottom: 10px;
+    }
+
+    .disabled {
+        visibility: hidden;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .border-bottom {
+        border-bottom: solid 1px #c7cacb;
+    }
+}

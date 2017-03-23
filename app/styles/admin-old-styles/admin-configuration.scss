@@ -1,0 +1,20 @@
+﻿.admin-old-styles {
+    .admin-configuration .mobileConfigTable input {
+        width: auto;
+        margin: 5px 0 5px 20px;
+    }
+
+    .admin-configuration .mobileConfigTable td {
+        vertical-align: middle;
+    }
+
+    .admin-configuration form .submit-button-container {
+        display: inline-block;
+    }
+
+    .admin-configuration form .submit-button-container .btn {
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}

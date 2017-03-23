@@ -1,0 +1,38 @@
+.admin-old-styles {
+    .close-form:after {
+        display: block;
+        background-image: url("../images/admin-old-styles/close-popup-ico.png");
+        background-size: 10px 11px;
+        width: 10px;
+        height: 11px;
+        content:"";
+    }
+
+    .notification a.close-notification:after {
+        display: block;
+        background-size: 10px 11px;
+        width: 10px;
+        height: 11px;
+        content:"";
+    }
+
+    .notification.notification-error a.close-notification:after {
+        background-image: url("../images/admin-old-styles/error-close-ico.png");
+    }
+
+    .notification.notification-success a.close-notification:after {
+        background-image: url("../images/admin-old-styles/success-close-ico.png");
+    }
+
+    span.selected-file:after {
+        display: block;
+        background-image: url("../images/admin-old-styles/transparent-white-stub.png");
+        background-size: 40px 25px;
+        position: absolute;
+        top: 9px;
+        right: 1px;
+        width: 40px;
+        height: 25px;
+        content:"";
+    }
+}

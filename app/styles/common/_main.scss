@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    min-height: 575px;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100%;
+    height: auto;
+    position: relative;
+
+    min-width: 320px;
+    font-family: $font-family-sans-pro;
+    color: $text-color-black;
+    background-color: $main-background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $headings-font-family;
+}
+
+h4,
+h5,
+h6 {
+    font-family: $font-family-sans-pro;
+}
+
+h1 {
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+}
+
+h5 {
+    font-size: $font-size-h5;
+}
+
+h6 {
+    font-size: $font-size-h6;
+}
+
+.content {
+    min-height: 440px; // mobile menu height
+    padding-bottom: 68px;
+}
+
+.page-content {
+    padding-top: 60px;
+}
+
+.gray-section {
+    background-color: #f5f6f7;
+}
+
+/* IE input cross fix */
+
+input::-ms-clear {
+    display: none;
+}
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0 none;
+    width: 100%;
+}
+
+div {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.clr::after {
+    display: none;
+    position: relative;
+    content: ' ';
+    color: transparent;
+    font-size: 3px;
+    line-height: 3px;
+    clear: both;
+}
+
+.hide {
+    display: none !important;
+}
+
+iframe {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media all and (max-width: 480px) {
+    h1, h2 {
+        font-size: $font-size-h3;
+    }
+
+    h3, h4 {
+        font-size: $font-size-h4;
+    }
+
+    .content {
+        padding-bottom: 120px;
+    }
+}
+
+//fix grabbing icon
+.grabbing, .grabbing * {
+    cursor: move !important;
+}

@@ -1,0 +1,38 @@
+.nav-container {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    overflow: hidden;
+    z-index: 2;
+
+    h4 {
+        position: absolute;
+        padding: 15px 30px;
+    }
+
+    .sandbox-navigation-container {
+        padding-left: 40px;
+    }
+}
+
+@media all and (max-width: 980px) {
+
+    .nav-container {
+
+        h4 {
+            display: none;
+        }
+    }
+
+}
+
+@media all and (max-width: 1610px) {
+
+    .admin-page .nav-container {
+
+        h4 {
+            display: none;
+        }
+    }
+
+}

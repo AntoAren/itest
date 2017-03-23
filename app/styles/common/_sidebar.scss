@@ -1,0 +1,114 @@
+sidebar {
+    flex: 0 0 auto;
+    max-width: 300px;
+    display: flex;
+
+    .sidebar {
+        width: 300px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #E6E6E6;
+        transition: margin .5s ease-in-out;
+        background: #fff;
+
+        &.menu-close {
+            margin-left: -250px;
+
+            .control-items .chevron-button {
+                .fa-angle-left {
+                    display: none;
+                }
+
+                .fa-angle-right {
+                    display: block;
+                }
+            }
+
+            .help {
+
+                display: flex;
+                justify-content: flex-end;
+
+                .help-link {
+                    padding: 0 15px;
+                }
+
+                .text {
+                    display: none;
+                }
+            }
+
+            .draggable-items {
+                display: none;
+            }
+        }
+
+        .control-items {
+
+            padding-left: 20px;
+            font-size: 18px;
+            color: #929394;
+            height: 60px;
+
+            .search-input {
+                height: 60px;
+            }
+
+            .chevron-button {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                .chevron-icons {
+                    display: block;
+                    padding: 15px 20px;
+                }
+
+                i {
+                    font-size: 28px;
+                }
+
+                .fa-angle-left {
+                    display: block;
+                }
+
+                .fa-angle-right {
+                    display: none;
+                }
+            }
+        }
+
+        .sidebar-content {
+            display: flex;
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .help {
+            flex: 0 0 auto;
+            padding-left: 20px;
+            border-top: 1px solid #E6E6E6;
+
+            .help-link {
+                cursor: pointer;
+                width: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            i {
+                color: $brand-color;
+                vertical-align: middle;
+                font-size: 18px;
+            }
+
+            .text {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+

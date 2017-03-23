@@ -1,0 +1,115 @@
+plate-sidebar {
+    flex: 0 0 auto;
+    max-width: 300px;
+    display: flex;
+
+    .sidebar-toggle {
+        position: absolute;
+        display: none;
+        top: -60px;
+        z-index: 2;
+        padding: 15px;
+        margin-left: -5px;
+        font-size: 24px;
+        color: $brand-color;
+        background: $bg-color-white;
+    }
+
+    .sidebar {
+        width: 250px;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #E6E6E6;
+        background: #fff;
+        border-bottom: 1px solid #E6E6E6;
+
+        &.menu-close {
+            margin-left: -200px;
+
+            .control-items .chevron-button {
+                .fa-angle-left {
+                    display: none;
+                }
+
+                .fa-angle-right {
+                    display: block;
+                }
+            }
+
+            .sidebar-content {
+                display: none;
+            }
+        }
+
+        .control-items {
+            padding-left: 30px;
+            font-size: 18px;
+            color: #929394;
+            z-index: 1;
+
+            .chevron-button {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                .chevron-icons {
+                    display: block;
+                    padding: 15px 20px;
+                }
+
+                i {
+                    font-size: 28px;
+                }
+
+                .fa-angle-left {
+                    display: block;
+                }
+
+                .fa-angle-right {
+                    display: none;
+                }
+            }
+        }
+
+        .sidebar-content {
+            padding: 20px 30px 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    plate-sidebar .sidebar .sidebar-content {
+        padding: 20px 15px 0;
+    }
+}
+
+@media (max-width: 760px) {
+    plate-sidebar .sidebar {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+    }
+
+    plate-sidebar .sidebar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    plate-sidebar .sidebar.menu-open {
+        display: flex;
+    }
+
+    .fade-block {
+        z-index: 2;
+        position: absolute;
+        height: 61px;
+        width: 30px;
+        top: -60px;
+        left: 46px;
+        background: linear-gradient(to left, rgba(red(#fff), green(#fff), blue(#fff), 0),
+            rgba(red(#fff), green(#fff), blue(#fff), 1));
+    }
+}

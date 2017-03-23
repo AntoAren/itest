@@ -1,0 +1,21 @@
+<div class="dropdown" uib-dropdown>
+        <div uib-dropdown-toggle class="button">
+            <svg class="expand-menu" viewBox="0 0 20 4" >
+                <path d="M5814,1356a2,2,0,1,1-2,2A2.006,2.006,0,0,1,5814,1356Zm8,0a2,2,0,1,1-2,2A2.006,2.006,0,0,1,5822,1356Zm8,0a2,2,0,1,1-2,2A2.006,2.006,0,0,1,5830,1356Z" transform="translate(-5812 -1356)"></path>
+            </svg>
+        </div>
+
+    <div class="options-list dropdown-left actions-list" uib-dropdown-menu>
+        <input type="text" class="search-input" ng-keyup="search($event)" ng-show="searcheable">
+        <ul>
+            <li ng-repeat="item in items" ng-mouseover="hoverOption($index)"
+                ng-class="{'selected': (hoveredOption === $index) || (selectedItem === $index)}">
+                <a href ng-click="actionByStatus(item.name, entity)">
+                    <img src="{{'images/' + item.icon + '.svg'}}" class="action"/>
+                    {{item.name}}
+                </a>
+            </li>
+            <li ng-hide="items.length !== 0">No items matched</li>
+        </ul>
+    </div>
+</div>

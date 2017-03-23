@@ -1,0 +1,110 @@
+text-input{
+    outline: none;
+}
+
+.text-input-container {
+
+    .hiddendiv {
+        display: none;
+        white-space: pre-wrap;
+        width: 100%;
+        min-height: 30px;
+        word-wrap: break-word;
+    }
+
+    .input-container {
+        position: relative;
+        width: 100%;
+        min-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        top: -20px;
+        user-select: none;
+    }
+
+    input {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        font-size: $font-size-base;
+        border: none;
+        border-bottom: 1px solid #B8B8B8;
+        background-color: transparent;
+        box-sizing: content-box;
+        outline: none;
+        box-shadow: none;
+        &:focus {
+            border-bottom: 2px solid $brand-color;
+        }
+        &:hover {
+            border-bottom: 2px solid $brand-color;
+        }
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 30px;
+        font-size: $font-size-base;
+        font-family: Arial;
+        line-height: 1.7;
+        border: none;
+        border-bottom: 1px solid #B8B8B8;
+        background-color: transparent;
+        box-sizing: border-box;
+        resize: none;
+        outline: none;
+        overflow: hidden;
+        word-break: normal;
+        box-shadow: none;
+        &:focus {
+            border-bottom: 2px solid $brand-color;
+        }
+        &:hover {
+            border-bottom: 2px solid $brand-color;
+        }
+    }
+
+    label {
+        color: #B8B8B8;
+        position: absolute;
+        cursor: text;
+        z-index: -1;
+        font-size: $font-size-sm;
+        font-family: $font-family-sans-pro;
+    }
+
+    label.placeholder {
+        transition: transform 0.3s ease;
+        left: 0;
+        bottom: 5px;
+    }
+
+    .animation label.placeholder {
+        top: -10px;
+        bottom: 0;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .animation-color label.placeholder {
+        color: $brand-color;
+    }
+
+    .input-error {
+        input {
+            border-bottom: 2px solid #EE6A57;
+        }
+
+        textarea {
+            border-bottom: 2px solid #EE6A57;
+        }
+
+        &.animation label.placeholder {
+            color: #EE6A57;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="dialog order-application">
+	<form name="orderForm" id="orderForm" class="order-form">
+		<div class="title">Order this {{(ngDialogData.type === 'widget') ? 'widget' : 'data source'}}?</div>
+		<h4 class="message" ng-bind="ngDialogData.item.name"></h4>
+		<p class="message">You will be shortly contacted by administrator in order to discuss payment details.</p>
+        <div class="button-wrapper">
+            <button ng-click="confirm()" class="btn btn-confirm confirm" type="submit">
+                <div>Submit</div>
+            </button>
+            <button class="btn btn-cancel" type="button" ng-click="closeThisDialog()">
+                <div>Cancel</div>
+            </button>
+        </div>
+	</form>
+	<a href="" class="close-form" ng-click="closeThisDialog()"></a>
+</div>

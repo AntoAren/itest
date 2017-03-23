@@ -1,0 +1,64 @@
+.full-screen-page {
+    height: 100%;
+
+    .content {
+        height: 100%;
+        padding: 0;
+
+        .nav-container {
+            display: none;
+        }
+    }
+
+    header-menu, footer {
+        display: none;
+    }
+}
+
+.full-screen-page-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .full-screen-page-content {
+        flex: 1;
+        display: flex;
+        max-height: calc(100% - 60px);
+        flex-direction: row;
+
+        .full-screen-page-view {
+            flex: 1;
+            background: #F5F6F7;
+            overflow: auto;
+            display: flex;
+
+            .droppable-area {
+                flex: 1;
+            }
+
+            //customize scroll for data-workflow section
+            &::-webkit-scrollbar {
+                width: 14px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                height: 6px;
+                border: 4px solid rgba(0, 0, 0, 0);
+                background-clip: padding-box;
+                -webkit-border-radius: 7px;
+                background-color: #e4e5e6;
+            }
+
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+
+            &::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+        }
+    }
+}
+

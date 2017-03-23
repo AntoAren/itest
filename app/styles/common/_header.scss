@@ -1,0 +1,327 @@
+.header {
+    z-index: 4;
+    background: #373B42;
+    height: 57px;
+
+    .menu-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        &.open > .account-menu {
+            display: block;
+            animation: appear .3s ease-in-out 0s 1;
+        }
+    }
+
+    .show-menu {
+        margin-left: 30px;
+        font-size: 20px;
+        display: none;
+        vertical-align: middle;
+        color: #707070;
+    }
+
+    .nav {
+        position: static;
+        z-index: 4;
+        min-width: 262px; //body min-width
+        height: 100%;
+
+        .logo {
+            width: 130px;
+            height: 54px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 30px;
+            text-decoration: none;
+            font-size: 0;
+            line-height: 0;
+            background: url(#{$imagesPath}/home-iTestHeaderLogo.png) 0 0 no-repeat transparent;
+            background-size: 100% 100%;
+        }
+
+        .close-nav {
+            background: #373B42;
+            width: 190px;
+            position: absolute;
+            z-index: 10;
+            transition: transform .4s ease-in-out;
+        }
+
+        .state-name {
+            display: none;
+            min-height: 57px;
+        }
+
+        ul.main-menu {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 200px;
+            padding-top: 20px;
+
+            li {
+                display: block;
+                position: relative;
+                float: left;
+                margin-right: 35px;
+
+                a {
+                    display: block;
+                    position: relative;
+                    text-decoration: none;
+                    color: $text-color-white;
+                    text-transform: uppercase;
+                    font-family: 'Source Sans Pro';
+                    font-size: 14px;
+                }
+            }
+
+            li.active {
+                a {
+                    color: $brand-color;
+                }
+            }
+        }
+
+        .account-information {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 9px 20px 0 0;
+            cursor: pointer;
+
+            .account-logo {
+                display: inline-block;
+                vertical-align: top;
+                width: 37px;
+                height: 37px;
+                border-radius: 37px;
+                margin-right: 10px;
+                margin-left: 20px;
+                background: url(#{$imagesPath}/user.png) 0 0 no-repeat transparent;
+            }
+
+            .text {
+                display: inline-block;
+                vertical-align: top;
+                color: $text-color-white;
+
+                .company, .name {
+                    max-width: 225px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .company {
+                    color: #ababab;
+                    font-size: 14px;
+                }
+            }
+            &:after {
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                width: 18px;
+                height: 12px;
+                margin: 15px 0 0 5px;
+                background: url(#{$imagesPath}/home-arrow-sprite.png) 0 -8px no-repeat transparent;
+                background-size: 12px 18px;
+            }
+        }
+
+        .shadow-account-information {
+            display: none;
+            height: 47px;
+            width: 200px;
+            left: 20px;
+            top: 30px;
+            z-index: 10;
+            position: absolute;
+            right: 0;
+            padding: 9px 20px 0 0;
+            cursor: pointer;
+        }
+
+        .account-menu {
+            display: none;
+            width: 230px;
+            background: $text-color-white;
+            position: absolute;
+            right: 0;
+            top: 57px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000001;
+
+            .account-menu-header {
+                display: none;
+                color: #ababab;
+            }
+
+            li {
+                padding: 10px 20px;
+            }
+
+            i {
+                margin-right: 15px;
+                color: $brand-color;
+            }
+
+            a {
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: $brand-color;
+            }
+        }
+    }
+
+    .shadow {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 57px);
+        top: 57px;
+        background: rgba(1, 1, 1, 0.5);
+        z-index: 1000001;
+    }
+}
+
+@media all and (max-width: 1015px) {
+    .header {
+
+        nav {
+            display: flex;
+
+            .burger-menu {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    .header .nav.open > .menu-wrapper {
+        transform: translateX(240px);
+    }
+
+    .header .nav.open > .close-nav {
+        transform: translateX(240px);
+    }
+
+    .header .nav.open ~ .shadow {
+        display: block;
+    }
+
+    .header .menu-wrapper {
+        position: absolute;
+        background: #24272D;
+        width: 240px;
+        padding: 30px 20px;
+        height: calc(100% - 57px);
+        min-height: 440px; // mobile menu height
+        top: 57px;
+        z-index: 1000002;
+        left: -240px;
+        transition: transform .4s ease-in-out;
+    }
+
+    .header .nav .close-nav {
+        background: #373B42;
+        width: 240px;
+        position: absolute;
+        z-index: 2;
+        left: -240px;
+        transition: transform .4s ease-in-out;
+    }
+
+    .header .nav .show-menu {
+        display: inline-block;
+    }
+
+    .header .nav .state-name {
+        display: inline-block;
+        color: $text-color-white;
+        vertical-align: middle;
+        margin-left: 15px;
+        line-height: 57px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .header .nav .shadow-account-information {
+        display: block;
+    }
+
+    .header .nav .account-information {
+        position: relative;
+        cursor: default;
+        height: auto;
+    }
+
+    .header .nav .account-information .text .company, .header .nav .account-information .text .name {
+        max-width: 200px;
+    }
+
+    .header .nav .account-information .account-logo {
+        margin-left: 0;
+    }
+
+    .header .nav .account-information:after {
+        display: none;
+    }
+
+    .header .nav ul.main-menu {
+        padding: 40px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header .nav ul.main-menu li {
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+
+    .header .nav ul.main-menu li a {
+        padding: 10px 0;
+    }
+
+    .header .nav .account-menu {
+        display: block !important;
+        width: 100%;
+        background: none;
+        position: relative;
+        box-shadow: none;
+        top: 0;
+    }
+
+    .header .nav .account-menu .account-menu-header {
+        display: block;
+    }
+
+    .header .nav .account-menu li {
+        padding: 10px 0;
+    }
+
+    .header .nav .account-menu i {
+        color: $brand-color;
+    }
+
+    .header .nav .account-menu a {
+        color: $brand-color;
+    }
+
+    .header .shadow {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .header .nav .show-menu {
+        margin-left: 10px;
+    }
+}

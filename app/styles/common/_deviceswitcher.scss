@@ -1,0 +1,173 @@
+$light-gray-icon: #bcbcbc;
+$gray-icon: #929292;
+$blue-icon: $brand-color;
+$shadow-color: #e0e0e0;
+
+.device-switcher {
+    width: 180px;
+    height: 59px;
+    line-height: 20px;
+    user-select: none;
+    display: inline-block;
+
+    label {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+
+    .disabled-layout {
+        cursor: auto;
+    }
+
+    .device {
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        path,circle {
+            fill: $gray-icon;
+            fill-rule: evenodd;
+        }
+    }
+
+    .devices-wrapper {
+        display: inline-block;
+        position: absolute;
+        right: 35px;
+        top: 0;
+        label {
+            display: none;
+            padding: 9px 2px;
+            input {
+                display: none;
+            }
+        }
+        label.active-layout {
+            input.tablet:checked ~ .device.tablet {
+                path {
+                    fill: $brand-color;
+                }
+            }
+            input.mobile:checked ~ .device.mobile {
+                path {
+                    fill: $brand-color;
+                }
+            }
+            input.desktop:checked ~ .device.desktop {
+                path, circle {
+                    fill: $brand-color;
+                }
+                circle {
+                    fill: $brand-color;
+                }
+            }
+        }
+        label.active-layout {
+            display: inline-block;
+            .device:hover {
+                path {
+                    fill: $brand-color;
+                }
+            }
+        }
+    }
+
+    .tablet {
+        width: 42px;
+        height: 42px;
+    }
+    .mobile {
+        width: 42px;
+        height: 42px;
+    }
+    .desktop {
+        width: 42px;
+        height: 42px;
+    }
+
+    .expand-menu-container {
+        width: 180px;
+        height: 59px;
+        position: relative;
+        display: inline-block;
+
+        &.open {
+            .menu {
+                display: block;
+            }
+        }
+
+        .expand-menu-label {
+            position: absolute;
+            height: 60px;
+            line-height: 54px;
+            right: 14px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 210px;
+            color: $text-color-black;
+            box-shadow: 0 0 7px $shadow-color;
+            z-index: 10000;
+
+            li {
+                background-color: #ffffff;
+                border: 1px solid $shadow-color;
+                border-bottom: none;
+                cursor: pointer;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                position: relative;
+                &:hover {
+                    background-color: #F5F6F7;
+                }
+                div {
+                    padding: 5px 5px;
+                }
+                .check-icon {
+                    display: none;
+                    position: absolute;
+                    right: 14px;
+                    top: 14px;
+                    background: url(#{$imagesPath}/check.png) no-repeat;
+                    width: 24px;
+                    height: 24px;
+                }
+                label {
+                    input:checked ~ .check-icon {
+                        display: block;
+                    }
+                }
+                input {
+                    display: none;
+                }
+            }
+            &:last-child {
+                border-bottom: 1px solid $shadow-color;
+            }
+        }
+        input {
+            display: none;
+        }
+
+        .expand-menu {
+            width: 20px;
+            height: 4px;
+            cursor: pointer;
+            overflow: hidden;
+
+            path {
+                fill: $light-gray-icon;
+                fill-rule: evenodd;
+            }
+        }
+
+        .expand-menu:hover {
+            path {
+                fill: $gray-icon;
+            }
+        }
+    }
+}

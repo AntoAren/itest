@@ -1,0 +1,209 @@
+body.ngdialog-open {
+
+    .ngdialog {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+.ngdialog-content {
+    margin: auto;
+    background-color: transparent;
+    min-width: 268px;
+
+    .dialog {
+        max-width: 550px;
+        margin: 10px;
+
+        .button-wrapper {
+            margin-top: 35px;
+            text-align: right;
+
+
+            .btn {
+                font-size: 15px;
+                font-weight: 200;
+                text-transform: none;
+                box-sizing: border-box;
+                line-height: 36px;
+                padding: 0 30px;
+                margin-left: 18px;
+            }
+
+            .btn-choose {
+                background-color: $btn-info-bg;
+                color: $text-color-white;
+            }
+
+            .btn-choose:hover {
+                background-color: $btn-info-bg-hover;
+            }
+
+            .btn-upload {
+                background-color: $btn-success-bg;
+                color: $text-color-white;
+            }
+
+            .btn-upload:hover {
+                background-color: $btn-success-bg-hover;
+            }
+
+            .btn-upload:disabled {
+                background-color: #ababab;
+                border-color: #ababab;
+                color: $text-color-white;
+            }
+
+            .btn-confirm {
+                color: $text-color-white;
+
+                &.confirm {
+                    background-color: $btn-success-bg;
+                }
+
+                &.delete {
+                    background-color: $btn-warning-bg;
+                }
+            }
+
+            .btn-confirm:hover {
+
+                &.confirm {
+                    background-color: $btn-success-bg-hover;
+                }
+
+                &.delete {
+                    background-color: $btn-warning-bg-hover;
+                }
+            }
+
+            .btn-cancel {
+                border: solid 2px $btn-cancel-bg;
+                color: $text-color-gray-light;
+            }
+
+            .btn-cancel:hover {
+                border: solid 2px $btn-cancel-bg-hover;
+                color: $text-color-gray-dark;
+            }
+        }
+
+        &.upload {
+            max-width: 550px;
+
+
+            .close-form {
+                right: 20px;
+            }
+        }
+
+        &.order-application {
+
+            .order-form {
+                background: #fff;
+                padding: 30px;
+
+                h4 {
+
+                    &.message {
+                        color: #034ca3;
+                    }
+                }
+            }
+        }
+
+        .form {
+            background: #fff;
+            padding: 40px 30px 30px;
+
+            &.confirm {
+                margin: 10px;
+            }
+        }
+
+        .title {
+            font-size: 24px;
+            padding-bottom: 15px;
+        }
+
+        .message {
+            margin-top: 30px;
+            word-wrap: break-word;
+
+            a {
+                color: $link-color;
+            }
+        }
+
+        .realfile {
+            display: none;
+        }
+
+        .selected-file {
+            margin-top: 25px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #034ca3;
+            font-size: 20px;
+            min-height: 25px;
+
+            &.placeholder {
+                color: $text-color-gray;
+            }
+        }
+
+
+
+        .close-form {
+            display: inline-block;
+            height: 18px;
+            width: 19px;
+            background-image: url(#{$imagesPath}/widgetconfig-actions.png);
+            background-position: 152px 0;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ngdialog-content {
+
+        .dialog {
+            .button-wrapper {
+
+                .selected-file {
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 362px) {
+    .ngdialog-content {
+
+        .dialog {
+
+            .button-wrapper {
+
+                text-align: center;
+                margin-top: 25px;
+
+                .btn {
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

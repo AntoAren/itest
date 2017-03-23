@@ -1,0 +1,284 @@
+.admin-old-styles {
+    .content h1 {
+        margin-bottom: 35px;
+    }
+
+    .search-container {
+        margin-bottom: 15px;
+    }
+
+    .search-container .search {
+        position: relative;
+        height: 23px;
+        width: 145px;
+        margin: 8px 0 0 15px;
+        float: right;
+        border: 1px solid #b5b5b5;
+        background-color: #fff;
+    }
+
+    .search-container .search input[type="text"] {
+        width: 110px;
+        line-height: 18px;
+        padding: 2px 0 2px 7px;
+        vertical-align: top;
+        border: none;
+        background: #fff;
+        font-size: 14px;
+        color: #000;
+    }
+
+    .search-container .search input[type="text"].placeholder {
+        color: #acb9bf;
+    }
+
+    .search-container .search input[type="button"] {
+        height: 23px;
+        width: 25px;
+        padding: 0 0 2px 0;
+        border: none;
+        background: url(../images/admin-old-styles/item-icos-spr.png) no-repeat 1px -90px;
+        cursor: pointer;
+    }
+
+    .orgs .info-grid {
+        margin-bottom: 30px;
+    }
+
+    .orgs .info-grid td {
+        text-align: left;
+        vertical-align: middle;
+        padding: 10px 0;
+        box-sizing: content-box;
+    }
+
+    .orgs .info-grid td.arrow {
+        width: 30px;
+    }
+
+    .orgs .info-grid td.arrow a {
+        display: block;
+        padding-left: 15px;
+    }
+
+    .orgs .info-grid .expanded td.arrow,
+    .orgs .info-grid td.hidden-col {
+        vertical-align: top;
+    }
+
+    .orgs .info-grid td.hidden-col {
+        padding-top: 10px;
+    }
+
+    .orgs .info-grid .expanded td.arrow a {
+        padding: 0 0 45px 15px;
+    }
+
+    .orgs .info-grid td.arrow a span {
+        display: inline-block;
+        background: url('../images/admin-old-styles/arrows-spr.png') -5px -208px no-repeat;
+        width: 5px;
+        height: 8px;
+    }
+
+    .orgs .info-grid .expanded td.arrow a span {
+        background: url('../images/admin-old-styles/arrows-spr.png') -3px -28px no-repeat;
+        width: 8px;
+        height: 5px;
+    }
+
+    .orgs .info-grid td.company h4 {
+        display: inline;
+        font-size: 20px;
+        margin-right: 15px;
+    }
+
+    .orgs .info-grid td.company .description {
+        display: none;
+    }
+
+    .orgs .info-grid .expanded td.company .description {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .orgs .info-grid td.company .description td {
+        padding-left: 30px;
+    }
+
+    .orgs .info-grid td.company .description span {
+        margin-right: 20px;
+    }
+
+    .orgs .info-grid td.hidden-col {
+        width: 380px;
+    }
+
+    .orgs .info-grid .description .left-column {
+        float: left;
+        width: 200px;
+    }
+
+    .orgs .info-grid .description .left-column dd {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .orgs .info-grid .description .left-column dt {
+        margin-top: 15px;
+    }
+
+    .orgs .info-grid .description .right-column {
+        float: right;
+        width: 200px;
+    }
+
+    .orgs .info-grid .description .right-column dd {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .orgs .info-grid .description .right-column dt {
+        margin-top: 15px;
+    }
+
+    .dialog-overlay .dialog {
+        width: 820px;
+        text-align: left;
+    }
+
+    .dialog-overlay .dialog h1 {
+        margin-bottom: 30px;
+    }
+
+    .overlay .dialog h2 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #b8b8b8;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .overlay .dialog hr {
+        margin: 20px 20px 30px 0;
+    }
+
+    .dialog-overlay .dialog form fieldset input,
+    .dialog-overlay .dialog form fieldset label {
+        display: block;
+    }
+
+    .dialog-overlay .dialog form fieldset input {
+        width: 320px;
+    }
+
+    .dialog-overlay .dialog form fieldset label {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .dialog-overlay .dialog form fieldset label.required:after {
+        content: "*";
+        color: #d80000;
+    }
+
+    .dialog-overlay .dialog form fieldset input {
+        height: 26px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        -moz-box-shadow: 1px 1px 2px 0 #dedede inset;
+        -webkit-box-shadow: 1px 1px 2px 0 #dedede inset;
+        box-shadow: 1px 1px 2px 0 #dedede inset;
+    }
+
+    .dialog-overlay .dialog form fieldset input[type="text"],
+    .dialog-overlay .dialog form fieldset input[type="password"],
+    .dialog-overlay .dialog form fieldset textarea {
+        color: #5e5e64;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .dialog-overlay .dialog form fieldset input.wrong {
+        border: 3px solid #d90000;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .dialog-overlay .dialog .require-fields i {
+        color: #d80000;
+    }
+
+    .dialog-overlay .dialog .error {
+        color: #d80000;
+        margin: 30px;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-organisation .left {
+        float: left;
+        /*margin-right: 75px;*/
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-organisation .right {
+        float: right;
+        margin-right: 20px;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-organisation .left,
+    .dialog-overlay .dialog form fieldset.edit-organisation .right {
+        width: 360px;
+        word-break: break-word;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-organisation textarea {
+        display: block;
+        padding: 5px 10px;
+        margin-bottom: 55px;
+        height: 95px;
+        width: 320px;
+        overflow-y: auto;
+        background: #fff;
+        -moz-box-shadow: 1px 1px 2px 0 #DEDEDE inset;
+        -webkit-box-shadow: 1px 1px 2px 0 #DEDEDE inset;
+        box-shadow: 1px 1px 2px 0 #DEDEDE inset;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-organisation .edit-service {
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-trkd table tr td {
+        vertical-align: middle;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-trkd table {
+        width: 100%;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-trkd table tr td.credentials {
+        width: 280px;
+    }
+
+    .dialog-overlay .dialog form fieldset.edit-trkd input {
+        width: 150px;
+    }
+
+    .dialog-overlay .dialog.add-organisation {
+        width: 820px;
+    }
+
+    .independent-textarea {
+        word-wrap: break-word;
+        border: solid white;
+        padding: 5px 10px;
+        width: 300px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+}

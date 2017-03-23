@@ -1,0 +1,145 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-family: $font-family-sans-pro;
+    white-space: nowrap;
+    touch-action: manipulation;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    border: 2px solid transparent;
+    line-height: 46px;
+    padding: 0 40px;
+    background: transparent;
+    height: auto;
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.btn-brand {
+    color: $text-color-white;
+    background: $brand-color;
+    border-color: $brand-color;
+
+    &:enabled {
+        &:active,
+        &:hover {
+            background: #12acc1;
+            border-color: #12acc1;
+        }
+    }
+}
+
+.btn-default {
+    color: #606060;
+    border-color: #C7CACB;
+}
+
+.btn-white {
+    color: $text-color-white;
+    border-color: #fff;
+}
+
+.btn-transparent {
+    color: #929394;
+    background: transparent;
+    border-color: #C7CACB;
+
+    &:enabled {
+        &:active,
+        &:hover {
+            border-color: #929394;
+        }
+    }
+}
+
+.btn-plum {
+    color: $text-color-white;
+    background: #8e244d;
+    border-color: #8e244d;
+
+    &:enabled {
+        &:active,
+        &:hover {
+            background: #6e1e3b;
+            border-color: #6e1e3b;
+        }
+    }
+}
+
+.btn-green {
+    color: $text-color-white;
+    background: #a3c644;
+    border-color: #a3c644;
+
+    &:enabled {
+        &:active,
+        &:hover {
+            background: #8eab2c;
+            border-color: #8eab2c;
+        }
+    }
+}
+
+.btn-reset {
+    color: #929394;
+    text-transform: none;
+
+    &:enabled {
+        &:active,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.btn-reset-filters {
+    color: $text-color-white;
+    background: #ababab;
+    border-color: #ababab;
+    text-transform: none;
+
+    &:enabled {
+        background: $btn-cancel-bg-hover;
+        border-color: $btn-cancel-bg-hover;
+
+        &:active,
+        &:hover {
+            background: $bg-color-light-gray;
+            border-color: $bg-color-light-gray;
+            text-decoration: underline;
+        }
+    }
+}
+
+//Button sizes
+.btn-large {
+    font-size: 18px;
+    line-height: 54px;
+}
+
+.btn-small {
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.btn-ex-small {
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0 30px;
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+.pointer-disabled {
+    cursor: default;
+}

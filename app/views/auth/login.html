@@ -1,0 +1,43 @@
+<div class="login-form" login-page disable-if="submitting">
+    <div class="login-wrapper">
+        <a class="close-button" ng-href="{{closeHref}}"></a>
+
+        <div class="login-header" ng-show="state === 'login'">
+            <h1>ВХОД</h1>
+            <p class="msg error-msg" ng-show="authError">Неправильное имя пользователя и/или пароль.</p>
+        </div>
+        <form ng-submit="login()">
+            <fieldset>
+                <div class="input-wrapper">
+                    <input id="username" type="text" tabindex="1" placeholder="Имя пользователя"
+                           ng-class="{'login-error': authError}" ng-model="user.username" required>
+                    <span class="input-wrapper-span" ng-class="{'login-error': authError}"><i class="fa fa-user"></i></span>
+                </div>
+                <div class="input-wrapper">
+                    <input id="password" class="pass" type="password" tabindex="2" placeholder="Пароль"
+                           ng-model="user.password" required>
+                    <span class="input-wrapper-span"><i class="fa fa-unlock-alt"></i></span>
+                </div>
+                <div class="wrapper">
+                    <div class="item remember">
+                        <input id="remember" type="checkbox">
+                        <label class="checkbox" for="remember"></label>
+                        <label class="text" for="remember">Запомнить меня</label>
+                    </div>
+                    <div class="item forgot-pass login-hidden">
+                        <a href="" class="forgot-pass">Забыли пароль?</a>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-brand">ВОЙТИ</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="sign-up">
+            У вас нет аккаунта на iTest? <a ui-sref="signup">Зарегистрировать</a>
+        </div>
+        <div class="logo-image">
+            <a class="image" ng-href="{{itestPortalEndpoint}}" target="_self"></a>
+        </div>
+    </div>
+</div>

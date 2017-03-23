@@ -1,0 +1,14 @@
+<div class="sidebar">
+    <div class="control-items">
+        <div class="search-input" ng-hide="withoutSearch">
+            <search-input placeholder="Поиск" action="onSearch"></search-input>
+        </div>
+        <div class="chevron-button">
+            <a class="chevron-icons">
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-content" ng-transclude></div>
+</div>

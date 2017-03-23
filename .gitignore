@@ -1,0 +1,8 @@
+dist
+coverage
+.tmp
+.idea
+.sass-cache
+bower_components
+node_modules
+npm-debug.log

@@ -1,0 +1,10 @@
+/* fonts */
+@font-face {
+    font-family: "Oswald Regular";
+    src: url(#{$fontsPath}/Oswald-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(#{$fontsPath}/SourceSansPro-Regular.otf);
+}

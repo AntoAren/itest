@@ -1,0 +1,160 @@
+.select-devices {
+
+    margin: 60px auto;
+
+    .name {
+        width: 380px;
+        margin: 0 auto;
+
+        .change-name-button {
+            cursor: default;
+            height: 40px;
+            width: 40px;
+            min-width: 40px;
+            border-radius: 5px;
+            display: block;
+            position: absolute;
+            top: -30px;
+            background: #D9EEF2;
+
+            &:before {
+                content: ' ';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-right: 2px solid $brand-color;
+                left: 50%;
+                top: 50%;
+                margin: -9px 0 0 -17px;
+            }
+
+            &:after {
+                content: ' ';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-bottom: 2px solid $brand-color;
+                left: 50%;
+                top: 50%;
+                margin: -17px 0 0 -9px;
+            }
+        }
+    }
+
+    .input-container:after {
+        content: ' ';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right,rgba(255,255,255,.5),#f5f6f7 50%);
+    }
+
+    .animation-color.input-container:after {
+        display: none;
+    }
+
+    .devices {
+        padding: 40px 0;
+    }
+
+    .header-text {
+        text-align: center;
+        font-size: $font-size-lg;
+        font-weight: bold;
+    }
+
+    .device {
+        width: 220px;
+        padding: 40px 0;
+        margin: 0 10px;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+
+        .title {
+            font-size: $font-size-base;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: $font-size-sm;
+        }
+
+        &.active {
+            background: #ECF8CC;
+            border: 1px solid #ADCC59;
+
+            .checker {
+                display: block;
+            }
+        }
+    }
+
+    .checker {
+        display: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: url(#{$imagesPath}/dashboard-checked.png) 9px no-repeat #A3C644;
+    }
+
+    .icon {
+        margin: auto;
+    }
+
+    .mobile {
+        .icon {
+            background: url(#{$imagesPath}/devices.png) 0 0;
+            width: 74px;
+            height: 144px;
+        }
+    }
+
+    .tablet {
+        .icon {
+            background: url(#{$imagesPath}/devices.png) -72px 0;
+            width: 142px;
+            height: 144px;
+        }
+    }
+
+    .desktop {
+        .icon {
+            background: url(#{$imagesPath}/devices.png) -216px 0;
+            width: 144px;
+            height: 144px;
+        }
+    }
+
+    .btn {
+        margin: auto;
+        width: 380px;
+        display: block;
+        margin-bottom: 60px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .select-devices .devices {
+        padding: 20px 0;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .select-devices .device {
+        width: 160px;
+        padding: 20px 0;
+    }
+
+    .select-devices .icon {
+        transform: scale(.75);
+    }
+}

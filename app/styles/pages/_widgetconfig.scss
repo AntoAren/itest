@@ -1,0 +1,1118 @@
+.widget-config {
+    height: 100%;
+    width: 100%;
+    min-width: 285px;
+    font-family: $font-family-sans-pro;
+    font-size: $font-size-base;
+    color: $text-color-black;
+    background-color: #fff;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    ::-ms-clear {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    .content {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        > div {
+            height: 100%;
+        }
+    }
+
+    .content-wrapper-medium {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+.widget-config-container {
+    height: 100%;
+}
+
+.content-container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.widget-config-header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid $config-border-color;
+    text-align: center;
+    position: relative;
+
+    .widget-name,
+    .widget-tabs,
+    .widget-actions {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .widget-tabs {
+        text-align: left;
+    }
+
+    .widget-name {
+        text-align: left;
+        padding-left: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 60px;
+        width: 30%;
+        z-index: -1;
+
+        h4 {
+            font-weight: $headings-font-weight;
+            line-height: $headings-line-height;
+            color: $headings-color;
+            font-family: $font-family-sans-pro;
+            font-size: $font-size-h4;
+        }
+
+        img, h4 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        img {
+            width: 42px;
+            height: 42px;
+            margin-right: 20px;
+        }
+    }
+
+    .widget-tabs {
+        font-size: $font-size-base;
+    }
+
+    .widget-actions {
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .btn-action {
+        background: transparent;
+        text-transform: none;
+        position: relative;
+        color: $text-color-black;
+    }
+
+    .btn-mobile {
+        cursor: pointer;
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        padding: 0;
+    }
+
+    .btn-action,
+    .btn-mobile {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+        }
+    }
+
+    .btn-export:before {
+        background: url(#{$imagesPath}/widgetconfig-actions.png) 0 0 no-repeat transparent;
+        left: 15px;
+        top: 14px;
+    }
+
+    .btn-download:before {
+        background: url(#{$imagesPath}/widgetconfig-actions.png) -20px 0 no-repeat transparent;
+        left: 15px;
+        top: 14px;
+    }
+
+    .btn-close {
+        border-left: 1px solid $config-border-color;
+
+        &:before {
+            background: url(#{$imagesPath}/widgetconfig-actions.png) -40px 0 no-repeat transparent;
+            left: 50%;
+            top: 50%;
+            margin: -9px 0 0 -9px;
+        }
+    }
+
+    .btn-fullscreen {
+        display: none;
+        position: relative;
+
+        &:before {
+            left: 50%;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            margin-top: -12px;
+            background: url(#{$imagesPath}/widgetconfig-fullscreen.gif) 0 0 no-repeat transparent;
+        }
+    }
+
+    .sizes-buttons {
+        text-align: right;
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+        right: 90px;
+        z-index: 1;
+        font-size: 0;
+
+        .btn {
+            width: 34px;
+            height: 34px;
+            line-height: 30px;
+            padding: 0;
+            border-width: 1px;
+        }
+
+        .selected {
+            @extend .btn-brand;
+        }
+
+        .btn-custom-size {
+            margin-right: 17px;
+        }
+    }
+}
+
+.content-container {
+    position: relative;
+}
+
+.widget-config-content {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    font-size: 0;
+    overflow-y: hidden;
+
+    .cell-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .widget-cell, .settings-cell {
+        font-size: $font-size-base;
+        display: inline-block;
+        min-height: 100%;
+        vertical-align: top;
+        position: relative;
+        overflow: auto;
+    }
+
+    .widget-cell {
+        overflow: hidden;
+        width: 100%;
+
+        .widget-container {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        &.sidebar-open {
+            width: calc(100% - 320px); //300 - sidebar width + 20 margin
+        }
+    }
+
+    .settings-cell {
+        width: 300px;
+        margin-right: 20px;
+        background: #f7f9fa;
+        border-right: 1px solid $config-border-color;
+        padding: 40px 30px;
+        -webkit-overflow-scrolling: touch;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .btn-reset {
+        text-transform: none;
+        color: $text-color-gray;
+        background: transparent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .btn-save {
+        color: $text-color-white;
+        border-color: #a3c644;
+        background: #a3c644;
+
+        &:hover {
+            border-color: #9fc143;
+            background: #9fc143;
+        }
+    }
+
+    .btn {
+        height: auto;
+    }
+
+    .btn-fixed-width {
+        width: 140px;
+    }
+
+    .settings-buttons {
+        margin-top: 20px;
+    }
+
+    .checkbox {
+        max-width: 240px;
+    }
+}
+
+.build-options {
+    .build-btn-container {
+        margin: 50px auto 0;
+        width: 250px;
+    }
+}
+
+.phonegap-integration {
+    position: static;
+    min-height: 100%;
+    background: white;
+
+    a {
+        color: $brand-color;
+    }
+}
+
+.phonegap-waiting-container {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: 0;
+    background: white;
+}
+
+.keys-panel {
+    margin-top: 30px;
+
+    h3, .filter-menu {
+        margin-top: 20px;
+        display: inline-block;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    h3 {
+        width: 85px;
+    }
+
+    label {
+        color: #B8B8B8;
+        padding: 0;
+        display: block;
+        z-index: 0;
+
+        &.placeholder {
+            bottom: -10px;
+        }
+    }
+
+    input[type="password"] {
+        left: 0;
+    }
+
+    .animation label.placeholder {
+        top: -20px;
+    }
+
+    .filter-menu .dropdown{
+        width: 150px;
+        max-width: 150px;
+    }
+
+    .btn:disabled {
+        background: #ababab;
+        border-color: #ababab;
+    }
+
+    .btn-container {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .refresh {
+        width: auto;
+    }
+
+    .btn-group {
+        vertical-align: top;
+        margin-top: 15px;
+    }
+
+    .dropdown {
+        .dropdown-toggle{
+            position: relative;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-right: 25px;
+            padding-left: 10px;
+        }
+
+        .caret {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .btn-refresh {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background: url(#{$imagesPath}/refresh.png) 0px 0px no-repeat transparent;
+        background-size: contain;
+    }
+
+    .content-panel {
+        display: inline-block;
+        width: 250px;
+    }
+
+    .unlock-key-panel {
+        margin-top: 20px;
+    }
+
+    .text-input-container {
+        margin-top: 30px;
+    }
+}
+
+@media all and (max-width: 1240px) {
+    .widget-config-header {
+        padding: 0;
+        height: 120px;
+
+        .widget-name,
+        .widget-tabs {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 8px;
+            width: 100%;
+            height: 60px;
+        }
+
+        .widget-tabs {
+            overflow: hidden;
+        }
+
+        .widget-name {
+            position: static;
+            padding-left: 25px;
+            padding-right: 80px;
+            max-width: none;
+        }
+
+        .btn-mobile {
+            border: none;
+            width: 40px;
+        }
+
+        .sizes-buttons {
+            right: 110px;
+            top: 13px;
+            margin-top: 0;
+        }
+
+        .btn-fullscreen {
+            display: inline-block;
+        }
+    }
+
+    .widget-config-content .widget-cell {
+        min-height: 100%;
+
+        .export-content-container, .widget-container {
+            padding-top: 20px;
+        }
+    }
+
+    .fullscreen {
+        .widget-config-header {
+            height: 60px;
+
+            .widget-tabs {
+                display: none;
+            }
+
+            .sizes-buttons {
+                display: none;
+            }
+
+            .btn-fullscreen {
+                &:before {
+                    background: url(#{$imagesPath}/widgetconfig-fullscreen.gif) -28px 0 no-repeat transparent;
+                }
+            }
+        }
+
+        .widget-config-content .widget-cell {
+            .widget-container {
+                padding: 0;
+            }
+
+            &.sidebar-open {
+                width: 100%;
+                display: inline-block;
+                height: 100%;
+            }
+
+            iframe {
+                height: 100%;
+            }
+        }
+
+        .content-container {
+            height: calc(100% - 60px);
+        }
+
+        .widget-config-content .settings-cell {
+            display: none;
+        }
+    }
+
+    .content-container {
+        height: calc(100% - 120px);
+    }
+}
+
+@media all and (max-width: 665px) {
+
+    .widget-config-header {
+        line-height: 50px;
+
+        .sizes-buttons {
+            display: none;
+        }
+
+        .widget-name {
+            padding-left: 17px;
+
+            img {
+                display: none;
+            }
+        }
+
+        .widget-tabs {
+            padding-left: 0;
+        }
+    }
+
+    .widget-config-content {
+        display: block;
+        overflow: auto;
+        width: 100%;
+
+        .widget-cell, .widget-cell.sidebar-open, .settings-cell {
+            width: auto;
+            display: block;
+            position: relative;
+        }
+
+        .widget-cell.sidebar-open {
+            display: none;
+        }
+
+        .settings-cell {
+            background: #fff;
+            margin-right: 0;
+            border-right: none;
+            padding: 40px 30px 0 30px;
+        }
+
+        .sizes-buttons-label {
+            display: none;
+        }
+
+        .checkbox {
+            max-width: 100%;
+        }
+    }
+}
+
+.widget-config {
+    @media all and (max-width: 480px) {
+        .blue.tabs-container {
+            li a {
+                min-width: 150px;
+            }
+        }
+    }
+}
+
+//export
+.export-content-container {
+    text-align: center;
+    padding: 70px 25px 25px 25px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .tabs-container .tab-content-block {
+        padding: 0;
+    }
+
+    .export-content {
+        background: white;
+        display: inline-block;
+
+        .tabs-titles {
+            padding-top: 11px;
+            width: 205px;
+
+            //Label is here because tabset directive doesn't provide such functionality
+            &:before {
+                content: 'Integration by:';
+                display: block;
+                line-height: 26px;
+                color: $text-color-gray;
+                margin-bottom: 23px;
+            }
+        }
+
+        .tab-content {
+            width: 690px;
+        }
+    }
+
+    .export-tab-container {
+        padding-bottom: 50px;
+        text-align: left;
+    }
+
+    .export-message {
+        padding: 11px 0;
+        margin-bottom: 45px;
+        line-height: 26px;
+    }
+
+    .integration-link {
+        color: $brand-color;
+    }
+
+    .export-form {
+        padding: 5px 0 0 0;
+
+        .export-step-desc {
+            position: relative;
+            padding: 5px 0 5px 41px;
+            margin: 4px 0;
+            color: $text-color-black;
+
+            &.export-step-first {
+                &:before {
+                    content: '1';
+                }
+            }
+
+            &.export-step-second {
+                &:before {
+                    content: '2';
+                }
+            }
+
+            &.export-step-third {
+                &:before {
+                    content: '3';
+                }
+            }
+
+            &.export-step-fourth {
+                &:before {
+                    content: '4';
+                }
+            }
+
+            &:before {
+                content: '';
+                color: $text-color-gray;
+                box-sizing: border-box;
+                font-weight: bold;
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 28px;
+                height: 28px;
+                line-height: 23px;
+                text-align: center;
+                display: inline-block;
+                background: white;
+                border: 2px solid $text-color-gray;
+                border-radius: 14px;
+
+            }
+        }
+
+        .export-step {
+            padding: 10px 0 30px 0;
+
+            textarea {
+                background: white;
+                height: 125px;
+                width: 100%;
+                box-shadow: none;
+                overflow: auto;
+            }
+        }
+
+        .btn-container {
+            text-align: right;
+            padding-top: 20px;
+        }
+
+        .row {
+            display: table;
+            width: 100%;
+        }
+
+        .input-cell,
+        .button-cell {
+            display: table-cell;
+            padding: 0;
+            vertical-align: top;
+        }
+
+        .input-cell {
+            padding-right: 20px;
+        }
+
+        .button-cell {
+            width: 140px;
+            text-align: right;
+        }
+
+        q {
+            quotes: "\201c" "\201d";
+            font-style: normal;
+        }
+
+        .add-btn {
+            margin-top: 30px;
+            color: $brand-color;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            padding-left: 22px;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                background: $brand-color;
+            }
+
+            &:before {
+                left: 5px;
+                top: 50%;
+                margin-top: -6px;
+                width: 2px;
+                height: 12px;
+            }
+
+            &:after {
+                top: 50%;
+                left: 0;
+                margin-top: -1px;
+                width: 12px;
+                height: 2px;
+            }
+
+        }
+
+        .more-external-url {
+            margin-top: 10px;
+        }
+    }
+
+    .export-tab-select {
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    @media all and (max-width: 600px) {
+        .tabs-titles {
+            display: none !important;
+        }
+
+        .export-tab-select {
+            display: block;
+
+            label {
+                padding-top: 0;
+            }
+        }
+
+        .row {
+            display: block;
+
+            .input-cell, .button-cell {
+                padding: 0;
+                display: block;
+            }
+
+            .button-cell {
+                width: auto;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+//fix controls
+.widget-config {
+    .distance {
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
+    .btn-wrapper {
+        margin-top: 30px;
+    }
+
+    label {
+        padding: 12px 0;
+        color: $text-color-gray;
+        display: inline-block;
+    }
+
+    input[type="text"],
+    select {
+        height: 42px;
+        padding-left: 15px;
+        display: block;
+        width: 100%;
+        border: 1px solid #C7CACB;
+        //        margin-bottom: 18px;
+    }
+
+    input[type = "checkbox"] {
+        display: none;
+        float: none;
+    }
+
+    input[type = "checkbox"] + span {
+        color: $text-color-black;
+        display: flex;
+        word-wrap: break-word;
+    }
+
+    input[type = "checkbox"] + span:before {
+        content: '';
+        position: relative;
+        top: 3px;
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border: 2px solid #C7CACB;
+        border-radius: 2px;
+        margin-right: 15px;
+        flex: 0 0 auto;
+    }
+
+    input[type = "checkbox"]:checked + span:before {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAMAAADepFZYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADvEKCAAAAAKHRSTlMAKJgILei7ATLs+VEMhTnw9EYQzMoUQPPvOozd9ekxeP7jY/zcIEsZfV/CYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABTSURBVAjXRYzXDoAwFEJvXXXUvfdW/v8LrYmtvMBJACIlZpg6k2XD4QpcD34gXYSCKIqRpBKyHEVZ1Wjat8I7oB8wTt9kXoCV6bttP87/nK77Cw/8oASxIZj4hwAAAABJRU5ErkJggg==) center no-repeat $brand-color;
+        border: 2px solid $brand-color;
+    }
+}
+
+//accordion overrides
+.widget-config {
+    .accordion {
+
+        .group {
+
+            h4 {
+                vertical-align: top;
+                border: 1px solid $bg-color-dark-gray;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                padding-left: 15px;
+                height: 42px;
+                line-height: 1.3;
+
+                a {
+                    display: inline-block;
+                    padding-left: 0;
+                    padding-right: 20px;
+                    background: none;
+                    text-transform: none;
+                    color: $text-color-black;
+
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 6px;
+                        position: absolute;
+                        right: 15px;
+                        top: 21px;
+                        margin-top: -3px;
+                        background: url(../images/widgetconfig-accordion.png) no-repeat 0 0;
+                    }
+                }
+
+                &.ui-state-active {
+
+                    a::after {
+                        background: url(../images/widgetconfig-accordion.png) no-repeat -11px 0;
+                    }
+                }
+
+                &.ui-accordion-header-active {
+                    background-color: $brand-color;
+
+                    a {
+                        color: $text-color-white;
+                    }
+                }
+            }
+
+            .accordion-content {
+
+                li {
+                    margin-bottom: 20px;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                select {
+                    width: 100%;
+                    padding-left: 15px;
+                    height: 42px;
+                }
+
+                button {
+                    padding: 10px;
+                    width: 40px;
+                    background-color: $bg-color-white;
+                    border: solid 1px $bg-color-dark-gray;
+
+                    &.bold {
+                        font-weight: 700;
+                    }
+
+                    &.italic {
+                        font-style: italic;
+                    }
+
+                    &.underline {
+                        text-decoration: underline;
+                    }
+
+                    &.selected {
+                        border: 1px solid transparent;
+                        background: $brand-color;
+                        color: $text-color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .group-settings {
+        dd, dt {
+            margin-bottom: 15px;
+        }
+
+        dt {
+            font-size: $font-size-sm;
+            color: $text-color-gray;
+        }
+
+        textarea {
+            width: 100%;
+            height: 135px;
+        }
+    }
+}
+
+//color picker overrides
+.widget-config {
+    .color-picker-input-wrapper {
+        display: flex;
+        width: 100%;
+        border: solid 1px $bg-color-dark-gray;
+
+        .color-picker-input {
+            flex-grow: 1;
+            height: 40px;
+            border: none;
+            border-left: solid 1px $bg-color-dark-gray;
+
+        }
+        .color-picker-swatch {
+            display: block;
+            vertical-align: top;
+            margin: 8px 9px;
+            border-right-width: 1px;
+        }
+    }
+}
+
+#color_selector {
+    box-sizing: content-box;
+}
+
+.widget-config {
+    .ui-datepicker-input {
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 41px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            border-left: 1px solid #C7CACB;
+            background: url(#{$imagesPath}/widgetconfig-datepicker.gif) 50% 50% no-repeat transparent;
+            pointer-events: none;
+        }
+    }
+    //override date picker
+    .ui-datepicker {
+        select {
+            display: inline-block;
+        }
+
+        .ui-datepicker-prev, .ui-datepicker-next {
+            height: 42px;
+            top: 4px;
+
+            span {
+                top: 14px;
+                background-image: url(#{$imagesPath}/arrow-back.png);
+            }
+        }
+    }
+}
+
+.widget-config {
+    .btn-brand {
+        &.zeroclipboard-is-hover,
+        &.zeroclipboard-is-active {
+            background: #12acc1;
+            border-color: #12acc1;
+        }
+    }
+}
+
+.fade {
+    position: relative;
+    overflow: hidden;
+}
+
+.fade:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(red(#fff), green(#fff), blue(#fff), 0), rgba(red(#fff), green(#fff), blue(#fff), 1) 70%);
+}
+
+.dimension-message {
+    display: inline-block;
+    padding-top: 180px;
+    background: url(#{$imagesPath}/not-sup-dimensions.png) center 80px no-repeat;
+
+    h3 {
+        color: $text-color-black;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 15px;
+    }
+}
+
+.register-panel {
+    .instructions {
+        margin: 10px auto;
+        text-align: left;
+        padding: 10px;
+        max-width: 320px;
+        border: 1px solid #EE6A57;
+        background: rgba(238, 106, 87, 0.3);
+        border-radius: 5px;
+
+        a {
+            color: $brand-color;
+        }
+
+        :first-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+}
+
+.widget-waiting-container {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: 0;
+
+    .waiting {
+        background: transparent;
+
+        .waiter {
+            width: 52px;
+            height: 52px;
+
+            & > div {
+                background: $brand-color;
+            }
+        }
+    }
+}

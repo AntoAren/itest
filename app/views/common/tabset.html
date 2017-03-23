@@ -1,0 +1,8 @@
+<div class="tabs-container {{mode}}" ng-class="{scrollable : scrollable}">
+    <ul class="tabs-titles clearfix">
+        <li ng-class="{selected: tab.active}" ng-repeat="tab in tabs">
+            <a ng-click="tab.select($event)" ng-href="{{tab.link}}">{{tab.heading}}</a>
+        </li>
+    </ul>
+    <div class="tab-content" ng-transclude ng-class="contentClass"></div>
+</div>

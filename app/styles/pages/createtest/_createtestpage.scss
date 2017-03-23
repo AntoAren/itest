@@ -1,0 +1,112 @@
+.test-container {
+    margin: 5px auto;
+    padding: 50px 200px;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dropdown-filters {
+    padding: 15px 0;
+    display: flex;
+}
+
+.dropdown-filter {
+    width: 350px;
+}
+
+.checkboxes-container {
+    padding: 15px 0;
+    display: block;
+}
+
+.checkbox-div {
+    padding: 5px 0;
+}
+
+.question-container {
+    padding: 15px 0;
+    display: block;
+}
+
+.question-info {
+    display: flex;
+}
+
+.input-question {
+    margin-left: 10px;
+    height: 30px;
+    width: 550px;
+}
+
+.input-answer {
+    margin-left: 10px;
+    height: 30px;
+    width: 470px;
+}
+
+.btn-remove {
+    margin-top: 4px;
+    margin-left: 13px;
+    background: url(#{$imagesPath}/remove.png) no-repeat;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+}
+
+.answer-container {
+    padding: 15px 0 0 15px;
+    display: flex;
+}
+
+.btn-add {
+    margin-top: 4px;
+    margin-left: 13px;
+    background: url(#{$imagesPath}/add.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.add-question-container {
+    margin-top: 15px;
+    margin-left: 190px;
+}
+
+.btn-create-test {
+    margin-top: 25px;
+    margin-left: 190px;
+    padding: 12px 20px 12px 20px;
+    text-align: center;
+    font-family: $font-family-sans-pro;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid transparent;
+    background-color: $status-color-green;
+}
+
+.btn-checkbox {
+    margin-left: 8px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.text-near-checkbox {
+    margin-left: 7px;
+}
+
+.error-border {
+    border: 2px solid red;
+    padding: 5px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 15px;
+    margin-left: 25px;
+}

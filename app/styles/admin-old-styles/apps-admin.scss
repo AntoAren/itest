@@ -1,0 +1,933 @@
+.admin-old-styles {
+    .admin .content h1 {
+        margin-bottom: 30px;
+    }
+
+    .admin .apps-grid {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .admin .apps-grid thead th {
+        text-align: left;
+        border-bottom: 1px solid #fff;
+        font-weight: 600;
+    }
+
+    .admin .apps-grid thead th {
+        max-width: 160px;
+        min-width: 90px;
+    }
+
+    .admin .apps-grid thead th div a {
+        color: #5e5e64;
+        font-weight: 400;
+    }
+
+    .admin .apps-grid thead th.order div a {
+        display: inline-block;
+        font-weight: 800;
+        background: url('../images/admin-old-styles/arrows-spr.png') 100% -20px no-repeat;
+        padding-right: 18px;
+    }
+
+    .admin .apps-grid thead th.order.up div a {
+        background-position: 100% -408px;
+    }
+
+    .admin .apps-grid thead th div {
+        border-bottom: 2px solid #d2d2d2;
+        padding: 0 0 5px 10px;
+    }
+
+    .admin .apps-grid tbody td {
+        padding: 15px 10px;
+        border-width: 2px 1px;
+        border-style: solid;
+        border-color: #fff;
+        background: #eee;
+        word-break: break-all;
+        max-width: 160px;
+        color: #333;
+    }
+
+    .admin .apps-grid tbody td.no-wrap {
+        white-space: nowrap;
+    }
+
+    .admin .apps-grid tbody tr:first-child td {
+        border-top: none;
+    }
+
+    .admin .apps-grid tbody tr.even td {
+        min-width: 110px;
+        background: #f8f8f8;
+    }
+
+    .admin .apps-grid tbody tr:hover td {
+        background: #e2f0fa;
+    }
+
+    .admin .apps-grid tbody td a {
+        text-transform: uppercase;
+    }
+
+    .admin .apps-grid tbody td.manage {
+        text-align: center;
+        vertical-align: top;
+        font-weight: 600;
+    }
+
+    .admin .apps-grid tbody td.manage.inactive {
+        cursor: default;
+    }
+
+    .admin .apps-grid tbody td.manage.inactive a {
+        color: #929394;
+        cursor: default;
+    }
+
+    .admin .apps-grid tbody td.widget.inactive {
+        cursor: default;
+    }
+
+    .admin .apps-grid tbody td.widget.inactive a {
+        color: #929394;
+        cursor: default;
+    }
+
+    .admin .apps-grid tbody td.widget a {
+        text-transform: none;
+    }
+
+    .admin .apps-grid tbody td.manage a {
+        visibility: hidden;
+    }
+
+    .admin .apps-grid tbody tr:hover td {
+        cursor: default;
+    }
+
+    .admin .apps-grid tbody tr:hover td.manage a {
+        visibility: visible;
+    }
+
+    .admin .apps-grid tbody td.status {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .admin .filter-container {
+        margin-bottom: 30px;
+        position: relative;
+        float: right;
+    }
+
+    .admin .audit-filter-container {
+        text-align: right;
+    }
+
+    .admin .audit-filter-container .filters {
+        margin-bottom: 20px;
+    }
+
+    .admin .audit-filter-container .filters .filter {
+        display: inline-block;
+    }
+
+    .admin .filter-container .search,
+    .admin .filter-container .selector {
+        float: right;
+    }
+
+    .admin .show-sys-checkbox {
+        position: relative;
+        float: right;
+        right: 0;
+        margin-left: 15px;
+        top: 12px;
+    }
+
+    .admin .show-sys-checkbox input[type="checkbox"] {
+        vertical-align: middle;
+    }
+
+    .admin .filter-container .search {
+        position: relative;
+        height: 24px;
+        width: 165px;
+        margin: 10px 0 0 15px;
+        float: right;
+        border: 1px solid #b5b5b5;
+        background-color: #fff;
+    }
+
+    .admin .filter-container .search input[type="text"] {
+        width: 130px;
+        line-height: 18px;
+        padding: 2px 0 2px 7px;
+        vertical-align: top;
+        border: none;
+        background: #fff;
+        font-size: 14px;
+        color: #000;
+    }
+
+    .admin .filter-container .search input[type="text"].placeholder {
+        color: #acb9bf;
+    }
+
+    .admin .filter-container .search input[type="button"] {
+        height: 23px;
+        width: 25px;
+        padding: 0 0 2px 0;
+        border: none;
+        background: url(../images/admin-old-styles/item-icos-spr.png) no-repeat 1px -90px;
+        cursor: pointer;
+    }
+
+    .admin .filter-container .selector {
+        margin-top: 0;
+        position: absolute;
+    }
+
+    .admin .filter-container .selector.vendors {
+        left: -135%;
+    }
+
+    .admin .filter-container .selector.status {
+        left: -70%;
+    }
+
+    .admin .filter-container .selector.expanded {
+        z-index: 1000;
+    }
+
+    .admin .filter-container .selector h6.arrow {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .admin .dialog-overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000000;
+        text-align: center;
+        display: block;
+        overflow: auto;
+        height: calc(100% - 32px);
+    }
+
+    .admin .dialog-overlay .publishing {
+        width: 450px !important;
+    }
+
+    .admin .dialog-overlay .publishing p {
+        text-align: justify;
+    }
+
+    .dialog-overlay:after {
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+        content: '';
+    }
+
+    @media screen and (max-width: 900px) {
+
+        .dialog-overlay:after {
+            display: none !important;
+        }
+    }
+
+    .admin .overlay .dialog {
+        width: 820px;
+        text-align: left;
+    }
+    .admin .overlay .dialog table {
+        width: 100%;
+    }
+
+    .admin .overlay .dialog table tr td {
+        text-align: left;
+        width: 50%;
+    }
+
+    .admin .overlay .dialog table tr td.options {
+        vertical-align: middle;
+    }
+
+    .admin .overlay .dialog table tr td.options a {
+        text-transform: uppercase;
+        color: #265f9d;
+        font-size: 15px;
+        font-weight: 800;
+        margin-right: 45px;
+    }
+
+    .admin .overlay .dialog table tr td h4 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #5e5e64;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .admin .overlay .dialog table tr td div {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    /*user-managment*/
+    .admin .user-managment .filter-container {
+        float: right;
+        margin: 0px;
+    }
+
+    .admin .user-managment .filter-container .selector.status {
+        position: relative;
+        left: 0px;
+        top: 8px;
+    }
+
+    .admin .user-managment .filter-container .selector h6.arrow {
+        text-align: right;
+    }
+
+    .admin .user-managment .nav-panel {
+        padding-top: 0px;
+    }
+
+    .admin .user-managment .apps-grid tr > th a {
+        font-size: 13px;
+    }
+
+    .admin .error-msg {
+        font-family: 'Source Sans Pro', sans-serif, 'Myriad Pro';
+        color: #FF0000;
+        font-size: 14px;
+    }
+
+    .admin .controll-buttons {
+        position: relative;
+        clear: both;
+        margin-top: 20px;
+    }
+
+    /*add-user-form*/
+    .admin .add-user-form h1, .manage-user-form h1, .reset-password-form h1, .manage-order-form h1 {
+        margin-bottom: 20px;
+    }
+
+    .admin .add-user-form, .manage-user-form, .reset-password-form, .manage-order-form {
+        border: 1px solid #d9d9d9;
+        padding: 30px;
+        margin: 20px 50px;
+        width: auto;
+    }
+
+    .admin .add-user-form .btn, .manage-user-form .btn, .reset-password-form .btn, .manage-order-form .btn {
+        height: 34px;
+    }
+
+    .add-user-form .btn, .manage-user-form .btn, .reset-password-form .btn, .manage-order-form .btn {
+        margin-top: 20px;
+        margin-right: 17px;
+    }
+
+    .admin.retire-dialog {
+        width: 380px;
+    }
+
+    .admin.retire-dialog .message {
+        margin-bottom: 20px;
+    }
+
+    .admin.retire-dialog table {
+        display: block;
+        overflow: auto;
+        height: 243px;
+    }
+
+    .admin.retire-dialog .btn-right {
+        float: right;
+    }
+
+    .admin .dialog > dl {
+        width: 340px;
+        display: inline-block;
+        vertical-align: top;
+        padding-bottom: 50px;
+    }
+
+    .admin .dialog dl:first-child {
+        margin-right: 10px;
+    }
+
+    .admin .dialog .position-right {
+        float: right;
+    }
+
+    .admin .dialog .btn-right {
+        float: right;
+    }
+
+    .admin .dialog > dl input, .dialog > dl textarea, .dialog > dl select, .dialog > dl .textarea {
+        padding: 0px;
+        margin: 0px;
+        width: 340px;
+        height: 26px;
+        line-height: 26px;
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: #cecece;
+        border-left-color: #cecece;
+        border-bottom-color: #e8e8e8;
+        border-right-color: #f8f8f8;
+        box-shadow: 1px 1px 4px 0 #dedede inset;
+        text-align: left;
+    }
+
+    .admin .dialog > dl input {
+        text-indent: 10px;
+    }
+
+    .admin .dialog > dl textarea, .dialog > dl .textarea {
+        height: 80px;
+        background: white;
+        padding: 0px;
+        margin: 0px;
+        overflow-y: auto;
+    }
+
+    .admin .dialog > dl .user-close-icon {
+        padding-right: 36px;
+        background: #eeeeee;
+        padding-left: 9px;
+        display: inline-block;
+        position: relative;
+        height: 27px;
+        line-height: 27px;
+        color: #656565;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+
+    .admin .dialog > dl .user-close-icon > span {
+        position: absolute;
+        right: 0px;
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        border-left: 1px solid #fff;
+        background: url(../images/admin-old-styles/close-user-roles.png) center center no-repeat;
+    }
+
+    .admin .dialog > dl .user-close-icon:hover > span {
+        background: url(../images/admin-old-styles/close-user-roles-hover.png) center center no-repeat;
+    }
+
+    .admin .dialog .password-input-1 {
+        display: inline-block;
+        padding-right: 30px;
+        width: 310px;
+        background: url(../images/admin-old-styles/password-icon-1.png) 312px 12px no-repeat;
+    }
+
+    .admin .dialog .password-input-2 {
+        display: inline-block;
+        color: #333333;
+        padding-right: 30px;
+        width: 310px;
+        background: url(../images/admin-old-styles/password-icon-2.png) 312px 7px no-repeat;
+    }
+
+    .admin .dialog .selector {
+        padding-right: 13px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .admin .dialog .selector.expanded div ul li {
+        margin-left: 10px;
+    }
+
+    .admin .dialog .select.selector {
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: #cecece;
+        border-left-color: #cecece;
+        border-bottom-color: #e8e8e8;
+        border-right-color: #e7e7e7;
+        box-shadow: 1px 1px 4px 0 #dedede inset;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .admin .dialog .select.selector.expanded div>ul {
+        border-left: 1px solid #cecece;
+        border-right: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e8e8e8;
+        box-shadow: 0 1px 0 0 #e7e7e7;
+    }
+
+    .admin .dialog .select.selector.expanded {
+        box-shadow: none;
+    }
+
+    .admin .dialog .selector.expanded div ul li {
+        text-align: left;
+    }
+
+    .admin .dialog .select.selector h6.arrow a {
+        display: block;
+    }
+
+    .admin-dropdown.selector .search-input {
+        display: block;
+        width: 175px;
+        color: black;
+        font-size: 13px;
+        text-indent: 5px;
+        margin: 7px auto 15px;
+    }
+
+    .admin .dropdown-big.selector .search-input {
+        display: block;
+        width: 290px;
+        color: black;
+        font-size: 13px;
+        text-indent: 5px;
+        margin: 7px 6px 5px 15px;
+    }
+    .admin .dropdown-big.selector h6.arrow span.text {
+        max-width: 290px;
+    }
+
+    .admin .dropdown-big.selector .arrow-wrapper {
+        position: absolute;
+        right: 0;
+    }
+
+    .admin .dropdown-big.selector.expanded .arrow-wrapper {
+        border: none;
+    }
+
+    .admin .dropdown-big.selector.expanded .arrow-wrapper span.arrow {
+        top: 12px;
+        right: 8px;
+    }
+
+    .admin .dropdown-big.selector .independent-expanded-list {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .admin .add-user-form > dl select, .admin .manage-user-form > dl select,
+    .admin .reset-password-form > dl select, .admin .manage-order-form > dl select {
+        width: 344px;
+    }
+
+    .admin .add-user-form > dl > dt > label, .admin .manage-user-form > dl > dt > label,
+    .admin .reset-password-form > dl > dt > label, .admin .manage-order-form > dl > dt > label {
+        color: #86868a;
+    }
+
+    .admin .add-user-form > dl > dt, .admin .manage-user-form > dl > dt,
+    .admin .reset-password-form > dl > dt, .admin .manage-order-form > dl > dt {
+        text-align: left;
+    }
+
+    .admin .dialog .red {
+        color: #e23f3f !important;
+    }
+
+    .admin .add-user-form .requires-field, .admin .manage-user-form .requires-field,
+    .admin .reset-password-form .requires-field, .admin .manage-order-form .requires-field {
+        display: inline-block;
+    }
+
+    .admin .dialog > dl > dt {
+        padding-bottom: 5px;
+        text-align: left;
+    }
+
+    .admin .add-user-form > dl > dd, .admin .manage-user-form > dl > dd, .admin .form-container > dl > dd,
+    .admin .reset-password-form > dl > dd, .admin .manage-order-form > dl > dd {
+        padding-bottom: 20px;
+    }
+
+    .admin .dialog .reset-link {
+        color: #265f9d;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .admin .dialog .bold {
+        font-weight: 700;
+    }
+
+    .admin .form-container {
+        margin: 20px 50px;
+        width: auto;
+        padding: 0px;
+        border: 0px;
+        display: block;
+    }
+
+    .admin .no-items-msg {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /*apps-management*/
+    .admin .apps-management-position {
+        position: absolute;
+        width: 100%;
+        bottom: 16px;
+    }
+
+    .admin .apps-managment .filter-container .selector.vendors {
+        position: relative;
+        left: 0px;
+    }
+
+    .admin .apps-managment .container-checkbox label > a {
+        color: #5c87b5;
+    }
+
+    .admin .apps-managment .container-checkbox input {
+        position: absolute;
+        left: 0px;
+        top: 12px;
+    }
+
+    .ie9 .admin .apps-managment .container-checkbox input, .ie8 .admin .apps-managment .container-checkbox input {
+        top: 10px;
+    }
+
+    .admin .apps-managment .container-checkbox label {
+        padding-left: 7px;
+    }
+
+    .admin .apps-managment .filter-container .selector.expanded {
+        width: auto;
+    }
+
+    .admin .apps-switch {
+        position: absolute;
+        width: 204px;
+        height: 37px;
+        right: 0px;
+        top: -52px;
+    }
+
+    .admin .apps-switch > a {
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #eeeeee;
+        display: block;
+        float: left;
+        margin: 0px;
+        text-align: center;
+        color: #000000;
+        background: #eeeeee;
+        font-weight: bold;
+    }
+
+    .admin .apps-switch > a:first-child {
+        color: #cacaca;
+        background: #ffffff;
+        font-weight: normal;
+    }
+
+    .admin .apps-managment .content h1 {
+        margin-bottom: 20px;
+    }
+
+    .admin .apps-managment .container-checkbox.expanded {
+        border-color: transparent;
+    }
+
+    .admin .fade {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .admin .fade:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%;
+        height: 20px;
+        background: linear-gradient(to right, rgba(238, 238, 238, 0), rgba(238, 238, 238, 1) 50%);
+    }
+
+    .admin .even .fade:after {
+        background: linear-gradient(to right, rgba(248, 248, 248, 0), rgba(248, 248, 248, 1) 50%);
+    }
+
+    .admin tr:hover .fade:after {
+        background: linear-gradient(to right, rgba(226, 240, 250, 0), rgba(226, 240, 250, 1) 50%);
+    }
+
+    /*Audit*/
+    .admin .select-field div.select.selector {
+        min-width: 200px;
+        margin-right: 20px;
+        display: inline-block;
+        padding-right: 13px;
+    }
+
+    .admin .ul-scroll {
+        max-height: 200px;
+        overflow: auto;
+        margin-right: -4px;
+    }
+
+    /*Admin dropdown*/
+
+    .admin .selector.expanded h6.arrow {
+        display: block;
+    }
+
+    .admin .selector.expanded h6 a {
+        vertical-align: bottom;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 130px;
+        overflow: hidden;
+    }
+
+    .admin .dialog-overlay .selector.expanded a {
+        text-overflow: ellipsis;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .admin .dialog-overlay .selector h6.arrow > a {
+        text-overflow: ellipsis;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .admin .user-managment .filter-container .selector.status h6.arrow {
+        margin-left: 5px;
+    }
+
+    .admin-dropdown .arrow-wrapper {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 23px;
+        height: 26px;
+        box-sizing: border-box;
+    }
+
+    .admin-dropdown .arrow-wrapper .arrow {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        color: #bababa;
+    }
+
+    .admin-dropdown.expanded .arrow-wrapper .arrow {
+        top: 11px;
+        right: 7px;
+    }
+
+    .admin-dropdown.selector {
+        padding: 0;
+        border: none;
+    }
+
+    .admin-dropdown.selector h6.arrow {
+        margin: 0;
+    }
+
+    .admin-dropdown.selector h6.arrow>a {
+        padding: 0;
+    }
+
+    .admin-dropdown.expanded .border-line {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        border-bottom: 3px solid #ffffff;
+        width: 21px;
+        z-index: 10000;
+    }
+
+    .admin-dropdown.expanded .arrow-wrapper {
+        position: relative;
+        border: 1px solid #e7e7e7;
+        background-position-x: 4px;
+        background-position-y: -167px;
+    }
+
+    /*Remove confim modal*/
+
+    .admin .remove-confirm {
+        width: 400px;
+    }
+
+    .admin .remove-confirm .controll-buttons {
+        text-align: center;
+    }
+
+    /* Manage Data Source modal */
+    .admin .dialog.manage-data-source {
+        width: 750px;
+    }
+
+    .admin .manage-data-source .controll-buttons .right {
+        margin-left: 450px;
+    }
+
+    /* Roles List in Dialogs */
+    ul.roles-list {
+        border: 1px solid #e7e7e7;
+        position: absolute;
+        width: 339px;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    ul.roles-list li {
+        margin-left: 5px;
+        margin-top: 8px;
+    }
+
+    ul.roles-list li a {
+        font-size: 14px;
+        color: #5e5e64;
+    }
+
+    /* Dropdowns in Dialogs */
+    .dialog-overlay .admin-dropdown.selector.status {
+        width: 317px;
+    }
+
+    .dialog-overlay .admin-dropdown {
+        border-top-color: #cecece;
+        border-left-color: #cecece;
+        border-bottom-color: #e8e8e8;
+        border-right-color: #e7e7e7;
+        box-shadow: 1px 1px 4px 0 #dedede inset;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .admin-dropdown h6.arrow {
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .admin-dropdown.selector a {
+        padding: 1px 2px 0;
+        color: #5e5e64;
+    }
+
+    .admin-dropdown.selector h6.arrow>a {
+        position: relative;
+        display: block;
+        text-overflow: ellipsis;
+        width: auto;
+        white-space: nowrap;
+        overflow: visible;
+    }
+
+    .selector.light-grey {
+        color: #5e5e64;
+    }
+
+    .roles-list li.selected {
+        font-weight: 700;
+    }
+    /* Tabs for pages with table */
+
+    .tabs-navigation {
+        display: table;
+        border-bottom: 1px solid #d8d7d9;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tabs-navigation .tab-content {
+        display: none;
+    }
+
+    .tabs-navigation ul.tabs-titles {
+        border-bottom: none;
+        display: table-cell
+    }
+    .tabs-navigation .tabs-container {
+        position: relative;
+        padding-top: 21px;
+    }
+    .tabs-navigation .user-managment {
+        padding-bottom: 0;
+        position: relative;
+        display: table-cell;
+    }
+    .admin-dropdown.expanded ul {
+        max-height: 190px;
+        overflow-y: auto;
+    }
+    .admin-dropdown.expanded ul li {
+        text-align: left;
+    }
+    .expanded .independent-expanded-list {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: #fff;
+        height: auto;
+        overflow-y: hidden;
+        z-index: 1000;
+    }
+
+    .searcheable .selector.expanded ul li:first-child {
+        border-top: none;
+        margin-top: 5px;
+        padding-top: 3px;
+    }
+
+    .admin .widgets-management .status.selector {
+        position: relative;
+        left: 0;
+        margin-top: 0;
+    }
+
+    /* Reset password form */
+
+    .manage-user-form.reset-password-form {
+        width: 340px;
+    }
+
+    .manage-user-form.reset-password-form dl {
+        width: 280px;
+    }
+
+    .manage-user-form.reset-password-form dl input {
+        width: 100%;
+    }
+}

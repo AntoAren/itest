@@ -1,0 +1,166 @@
+{
+    "testId": 1,
+    "questionsNumber": 3,
+    "categoryId": 2,
+    "topicId": 3,
+    "private": true,
+    "showCorrectAnswers": false,
+    "questions": [
+        {
+            "questionNumber": 1,
+            "questionText": "В каком году отменили крепостное право?",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "1863",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "1812",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "1861",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "1865",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionNumber": 2,
+            "questionText": "Отметьте участников антигитлеровской коалиции.",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "Франция",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "Германия",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "СССР",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "Италия",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionNumber": 3,
+            "questionText": "В каком году началась Вторая Мировая Война?",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "1939",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "1914",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "1941",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "1945",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionNumber": 4,
+            "questionText": "Кто был одним из основателей итальянского фашизма?",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "Адольф Гитлер",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "Франсиско Франко",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "Бенито Муссолини",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "Джузеппе Бастианини",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionNumber": 5,
+            "questionText": "Кто был первым князем Великого Княжества Литовского?",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "Войшелк",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "Гедимин",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "Тройден",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "Миндовг",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionNumber": 6,
+            "questionText": "Кто перенес столицу Великого Княжества Литовского из Новогрудка в Вильно?",
+            "answers": [
+                {
+                    "answerNumber": 1,
+                    "answerText": "Гедимин",
+                    "correct": true
+                },
+                {
+                    "answerNumber": 2,
+                    "answerText": "Витень",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 3,
+                    "answerText": "Ольгерд",
+                    "correct": false
+                },
+                {
+                    "answerNumber": 4,
+                    "answerText": "Ягайло",
+                    "correct": false
+                }
+            ]
+        }
+    ]
+}

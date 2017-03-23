@@ -1,0 +1,37 @@
+.snapping.desktop {
+    justify-content: flex-start;
+
+    .grid-layout-wrapper {
+        padding: 8px;
+        background-color: #F5F6F8;
+        flex: auto;
+
+        .grid-layout {
+            width: 100%;
+            background: url(#{$imagesPath}/gridcell.png) repeat;
+            background-size: 72px;
+            margin: 0 auto 10px;
+            flex: auto;
+
+            .resize-ds-icon {
+                position: absolute;
+                bottom: -15px;
+                right: 2px;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+                display: none;
+
+                path {
+                    fill: #c7cacb;
+                    fill-rule: evenodd;
+                }
+            }
+        }
+    }
+}
+
+.full-screen-page-container .full-screen-page-content
+.full-screen-page-view .droppable-area.grid-layout-wrapper {
+    flex: auto;
+}

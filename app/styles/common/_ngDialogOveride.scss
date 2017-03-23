@@ -1,0 +1,34 @@
+.ngdialog-itest-theme {
+
+    .ngdialog-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .ngdialog-content {
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ngdialog-close {
+        z-index: 1000;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        right: 33px;
+        top: 0;
+        background: url(#{$imagesPath}/home-popupCloseButton.png) 50% 50% no-repeat transparent;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+        }
+    }
+
+    @media all and (max-width: 980px) {
+        .ngdialog-close {
+            right: 0;
+        }
+    }
+}

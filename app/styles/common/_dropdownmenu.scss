@@ -1,0 +1,164 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .button {
+        cursor: pointer;
+
+        .expand-menu {
+            width: 20px;
+            height: 4px;
+            overflow: hidden;
+            path {
+                fill: $light-gray-icon;
+                fill-rule: evenodd;
+            }
+        }
+
+        .caret {
+            margin: 0 5px;
+        }
+
+        &:hover {
+            path {
+                fill: $gray-icon;
+            }
+        }
+    }
+
+    .options-list {
+        padding: 0;
+        position: absolute;
+        z-index: 1000;
+        display: none;
+        font-size: 14px;
+        list-style: none;
+        background-color: $text-color-white;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+
+        &.actions-list {
+            top: 25px;
+            width: 170px;
+            right: -20px;
+        }
+
+        &.filter-options {
+            top: 26px;
+            width: 100%;
+
+            .selected a {
+                color: $brand-color;
+            }
+
+            a {
+                display: block;
+                position: relative;
+                justify-content: space-between;
+                padding: 10px 25px 10px 15px;
+                font-size: 16px;
+
+                .item-name {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .status-indicator {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 17px;
+                    right: 12px;
+                }
+            }
+
+            .retired {
+                background-color: $status-color-red;
+            }
+            .uploaded {
+                background-color: $text-color-light-gray;
+            }
+            .published {
+                background-color: $status-color-green;
+            }
+            .submitted {
+                background-color: $status-color-orange;
+            }
+            .under_review {
+                background-color: $status-color-orange;
+            }
+            .rejected {
+                background-color: $status-color-red;
+            }
+        }
+
+        .action {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            position: relative;
+            top: 3px;
+        }
+
+        a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: $text-color-black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        a:hover {
+            background-color: $main-background-color;
+        }
+
+        a .fa {
+            padding-right: 10px;
+            color: $light-gray-icon;
+        }
+    }
+
+    &.open > .options-list {
+        display: block;
+    }
+
+    .scrollable-dropdown {
+        overflow-y: scroll;
+        max-height: 350px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .dropdown {
+        .actions-list {
+            width: 190px;
+        }
+    }
+
+    .sandbox-content li:nth-child(odd) .status-date .actions-list {
+        left: -115px;
+    }
+    .sandbox-content li:nth-child(even) .status-date .actions-list {
+        left: -165px;
+    }
+}
+
+@media screen and (max-width: 357px) {
+
+    .dropdown {
+        .actions-list {
+            width: 180px;
+        }
+    }
+
+    .sandbox-content li:nth-child(odd) .status-date .actions-list {
+        left: -105px;
+    }
+    .sandbox-content li:nth-child(even) .status-date .actions-list {
+        left: -145px;
+    }
+}
